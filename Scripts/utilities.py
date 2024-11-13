@@ -175,7 +175,7 @@ def load_multiple_files(file_paths, file_type='trc'):
 
 def compare_joint_angles(df, move, joint_angle, participant_id_good, participant_id_bad):
     """
-    Compares joint angles for a specific move and joint between all time series for "good" and "bad" evaluations of two participants using DTW.
+    Compares joint angles for a specific move and joint between a "good" and "bad" evaluation for two participants using DTW.
     
     Parameters:
     df (pd.DataFrame): DataFrame containing time-series data.
@@ -185,7 +185,7 @@ def compare_joint_angles(df, move, joint_angle, participant_id_good, participant
     participant_id_bad (str): The participant_id for the "bad" evaluation.
     
     Returns:
-    list: A list of dictionaries containing DTW distances and alignment objects for each comparison.
+    dict: A summary of DTW distances between "good" and "bad" evaluations, with statistics.
     """
     # Filter data for the "good" and "bad" evaluations for the specific move and joint angle
     data_good = df[(df['move'] == move) & (df['evaluation'] == 'good') & 
@@ -198,30 +198,28 @@ def compare_joint_angles(df, move, joint_angle, participant_id_good, participant
         print(f"No data found for the specified filters.")
         return None
 
-    # List to store the results of each comparison
-    comparison_results = []
+    # Ensure both series are arrays and iterate over time series
+    distances = []
+    for i in range(min(len(data_good), len(data_bad))):
+        series_1 = np.array(data_good[i])
+        series_2 = np.array(data_bad[i])
 
-    # Compare each combination of "good" and "bad" series
-    for i in range(len(data_good)):
-        for j in range(len(data_bad)):
-            series_1 = np.array(data_good[i]) if isinstance(data_good[i], (list, np.ndarray)) else np.array([data_good[i]])
-            series_2 = np.array(data_bad[j]) if isinstance(data_bad[j], (list, np.ndarray)) else np.array([data_bad[j]])
+        # Compute DTW alignment
+        alignment = dtw(series_1, series_2, keep_internals=True)
+        distances.append(alignment.distance)
 
+    # Return the summary of DTW distances
+    distance_summary = {
+        'mean_distance': np.mean(distances),
+        'min_distance': np.min(distances),
+        'max_distance': np.max(distances),
+        'all_distances': distances
+    }
 
-            # Compute DTW alignment
-            alignment = dtw(series_1, series_2, keep_internals=True)
-
-            # Append the result to the list
-            comparison_results.append({
-                'distance': alignment.distance,
-                'alignment': alignment,
-                'series_1': series_1,
-                'series_2': series_2,
-                'series_index_good': i,
-                'series_index_bad': j
-            })
-
-    return comparison_results
+    print(f"Summary of DTW distances for {joint_angle} during {move} between 'good' (ID: {participant_id_good}) and 'bad' (ID: {participant_id_bad}) evaluations:")
+    print(f"Mean Distance: {distance_summary['mean_distance']}")
+    
+    return distance_summary
 
 def compare_aggregated_joint_angles(df, move, joint_angle):
     """
