@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_joint_angle(df, joint_name):
+def plot_joint_angle(df, joint_name, fig_size = (14, 8)):
     """
     Plots the joint angle over time for multiple participants from a combined DataFrame,
     distinguishing between 'good' and 'bad' participants by line style and between video numbers.
@@ -12,7 +12,7 @@ def plot_joint_angle(df, joint_name):
                        'evaluation', and 'video_number'.
     joint_name (str): The name of the joint angle column to plot (e.g., 'right_knee', 'left_knee').
     """
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=fig_size)
     
     # Generate a color map for unique participants
     unique_participants = df['participant_id'].unique()
@@ -46,7 +46,7 @@ def plot_joint_angle(df, joint_name):
     plt.show()
 
 
-def plot_all_joints(df, joint_names, grid=True):
+def plot_all_joints(df, joint_names, grid=True, fig_size = (14, 8)):
     """
     Plots all specified joint angles over time in a single plot for each participant,
     differentiating between video numbers using line styles. Optionally arranges the plots in a grid.
@@ -65,7 +65,7 @@ def plot_all_joints(df, joint_names, grid=True):
         num_cols = 2  # Number of columns in the grid
         num_rows = int(np.ceil(num_participants / num_cols))  # Calculate the number of rows
         
-        fig, axes = plt.subplots(num_rows, num_cols, figsize=(14, 8 * num_rows))
+        fig, axes = plt.subplots(num_rows, num_cols, figsize=(fig_size[0],fig_size[1] * num_rows))
         axes = axes.flatten()  # Flatten to easily index if there are multiple subplots
 
     for idx, participant_id in enumerate(unique_participants):
@@ -76,7 +76,7 @@ def plot_all_joints(df, joint_names, grid=True):
         if grid:
             ax = axes[idx]
         else:
-            plt.figure(figsize=(14, 8))
+            plt.figure(figsize=fig_size)
             ax = plt.gca()  # Get current axis
         
         # Plot all specified joint angles for the participant, differentiating by video number
