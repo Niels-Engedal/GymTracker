@@ -4,6 +4,8 @@ import numpy as np
 import os
 import re
 
+from dtw import dtw
+
 def list_filepaths(directory, extensions):
     """
     Lists all files with the specified extensions in the directory and its subdirectories.
@@ -170,3 +172,34 @@ def load_multiple_files(file_paths, file_type='trc'):
     # Combine all DataFrames into a single DataFrame
     combined_df = pd.concat(data_list, ignore_index=True)
     return combined_df
+
+
+
+def compare_joint_angles(df, move, joint_angle, evaluation_1, evaluation_2):
+    """
+    Compares joint angles for a specific move and joint between two evaluations using DTW.
+    
+    Parameters:
+    df (pd.DataFrame): DataFrame containing time-series data.
+    move (str): The name of the move to filter.
+    joint_angle (str): The joint angle column to compare (e.g., 'right_knee').
+    evaluation_1 (str): The first evaluation type (e.g., 'good').
+    evaluation_2 (str): The second evaluation type (e.g., 'bad').
+    
+    Returns:
+    float: DTW distance between the two evaluations.
+    """
+    # Filter the DataFrame for the specific move and evaluations
+    data_1 = df[(df['move'] == move) & (df['evaluation'] == evaluation_1)][joint_angle].values
+    data_2 = df[(df['move'] == move) & (df['evaluation'] == evaluation_2)][joint_angle].values
+
+    # Ensure both series are 1D arrays
+    series_1 = np.array(data_1)
+    series_2 = np.array(data_2)
+
+    # Compute DTW distance
+    distance, path = dtw(series_1, series_2, dist=lambda x, y: abs(x - y))
+    
+    print(f"DTW distance between '{evaluation_1}' and '{evaluation_2}' evaluations for {joint_angle} during {move}: {distance}")
+    
+    return distance, path
