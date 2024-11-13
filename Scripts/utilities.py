@@ -173,8 +173,6 @@ def load_multiple_files(file_paths, file_type='trc'):
     combined_df = pd.concat(data_list, ignore_index=True)
     return combined_df
 
-
-
 def compare_joint_angles(df, move, joint_angle, evaluation_1, evaluation_2):
     """
     Compares joint angles for a specific move and joint between two evaluations using DTW.
