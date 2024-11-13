@@ -147,3 +147,30 @@ def plot_hip_trajectory(df):
     plt.legend()
     plt.grid(True)
     plt.show()
+
+def plot_custom_dtw_alignment(series_1, series_2, alignment, participant_id_good, participant_id_bad):
+    """
+    Plots a custom DTW alignment between two time series.
+    
+    Parameters:
+    series_1 (array-like): The time series for the "good" evaluation.
+    series_2 (array-like): The time series for the "bad" evaluation.
+    alignment: The DTW alignment object.
+    participant_id_good (str): The participant_id for the "good" evaluation.
+    participant_id_bad (str): The participant_id for the "bad" evaluation.
+    """
+    plt.figure(figsize=(14, 7))
+
+    # Plot the two time series
+    plt.plot(series_1, label=f'{participant_id_good} (good)', color='blue')
+    plt.plot(series_2, label=f'{participant_id_bad} (bad)', color='red')
+
+    # Plot the alignment path
+    for (i, j) in zip(alignment.index1, alignment.index2):
+        plt.plot([i, j], [series_1[i], series_2[j]], color='gray', linewidth=0.5)
+
+    plt.title(f"DTW Alignment between '{participant_id_good}' (good) and '{participant_id_bad}' (bad)")
+    plt.xlabel('Time Index')
+    plt.ylabel('Joint Angle')
+    plt.legend()
+    plt.show()

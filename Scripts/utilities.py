@@ -173,31 +173,87 @@ def load_multiple_files(file_paths, file_type='trc'):
     combined_df = pd.concat(data_list, ignore_index=True)
     return combined_df
 
-def compare_joint_angles(df, move, joint_angle, evaluation_1, evaluation_2):
+def compare_joint_angles(df, move, joint_angle, participant_id_good, participant_id_bad):
     """
-    Compares joint angles for a specific move and joint between two evaluations using DTW.
+    Compares joint angles for a specific move and joint between all time series for "good" and "bad" evaluations of two participants using DTW.
     
     Parameters:
     df (pd.DataFrame): DataFrame containing time-series data.
     move (str): The name of the move to filter.
     joint_angle (str): The joint angle column to compare (e.g., 'right_knee').
-    evaluation_1 (str): The first evaluation type (e.g., 'good').
-    evaluation_2 (str): The second evaluation type (e.g., 'bad').
+    participant_id_good (str): The participant_id for the "good" evaluation.
+    participant_id_bad (str): The participant_id for the "bad" evaluation.
     
     Returns:
-    float: DTW distance between the two evaluations.
+    list: A list of dictionaries containing DTW distances and alignment objects for each comparison.
     """
-    # Filter the DataFrame for the specific move and evaluations
-    data_1 = df[(df['move'] == move) & (df['evaluation'] == evaluation_1)][joint_angle].values
-    data_2 = df[(df['move'] == move) & (df['evaluation'] == evaluation_2)][joint_angle].values
+    # Filter data for the "good" and "bad" evaluations for the specific move and joint angle
+    data_good = df[(df['move'] == move) & (df['evaluation'] == 'good') & 
+                   (df['participant_id'] == participant_id_good)][joint_angle].values
+    data_bad = df[(df['move'] == move) & (df['evaluation'] == 'bad') & 
+                  (df['participant_id'] == participant_id_bad)][joint_angle].values
 
-    # Ensure both series are 1D arrays
-    series_1 = np.array(data_1)
-    series_2 = np.array(data_2)
+    # Check if we have data
+    if len(data_good) == 0 or len(data_bad) == 0:
+        print(f"No data found for the specified filters.")
+        return None
 
-    # Compute DTW distance
-    distance, path = dtw(series_1, series_2, dist=lambda x, y: abs(x - y))
+    # List to store the results of each comparison
+    comparison_results = []
+
+    # Compare each combination of "good" and "bad" series
+    for i in range(len(data_good)):
+        for j in range(len(data_bad)):
+            series_1 = np.array(data_good[i]) if isinstance(data_good[i], (list, np.ndarray)) else np.array([data_good[i]])
+            series_2 = np.array(data_bad[j]) if isinstance(data_bad[j], (list, np.ndarray)) else np.array([data_bad[j]])
+
+
+            # Compute DTW alignment
+            alignment = dtw(series_1, series_2, keep_internals=True)
+
+            # Append the result to the list
+            comparison_results.append({
+                'distance': alignment.distance,
+                'alignment': alignment,
+                'series_1': series_1,
+                'series_2': series_2,
+                'series_index_good': i,
+                'series_index_bad': j
+            })
+
+    return comparison_results
+
+def compare_aggregated_joint_angles(df, move, joint_angle):
+    """
+    Compares aggregated "good" versus "bad" joint angles for a specific move using the existing compare_joint_angles function.
     
-    print(f"DTW distance between '{evaluation_1}' and '{evaluation_2}' evaluations for {joint_angle} during {move}: {distance}")
+    Parameters:
+    df (pd.DataFrame): DataFrame containing time-series data.
+    move (str): The name of the move to filter.
+    joint_angle (str): The joint angle column to compare (e.g., 'right_knee').
     
-    return distance, path
+    Returns:
+    dict: A summary of DTW distances between aggregated "good" and "bad" evaluations, with statistics.
+    """
+    # Create aggregated data by setting the same 'participant_id' for all entries in "good" and "bad"
+    df_good = df[(df['move'] == move) & (df['evaluation'] == 'good')].copy()
+    df_good['participant_id'] = 'aggregated_good'
+    
+    df_bad = df[(df['move'] == move) & (df['evaluation'] == 'bad')].copy()
+    df_bad['participant_id'] = 'aggregated_bad'
+
+    # Combine the dataframes to have a unified structure for comparison
+    df_combined = pd.concat([df_good, df_bad])
+
+    # Use the existing function to compare aggregated "good" and "bad" data
+    distance_summary = compare_joint_angles(
+        df=df_combined,
+        move=move,
+        joint_angle=joint_angle,
+        participant_id_good='aggregated_good',
+        participant_id_bad='aggregated_bad'
+    )
+
+    return distance_summary
+
+
