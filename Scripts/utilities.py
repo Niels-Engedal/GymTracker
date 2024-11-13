@@ -4,23 +4,28 @@ import numpy as np
 import os
 import re
 
-def list_filepaths(directory, extension):
+def list_filepaths(directory, extensions):
     """
-    Lists all *extension* files in the specified directory and its subdirectories.
+    Lists all files with the specified extensions in the directory and its subdirectories.
     
     Parameters:
     directory (str): The path to the directory.
-    extension (str): The file extension to look for.
+    extensions (str or list/tuple): The file extension(s) to look for.
     
     Returns:
-    list: A list of file paths to *extension* files in the directory and subdirectories.
+    list: A list of file paths to files with the specified extensions in the directory and subdirectories.
     """
+    # Ensure extensions is a tuple for consistency
+    if isinstance(extensions, str):
+        extensions = (extensions,)
+    
     files = []
     for root, _, filenames in os.walk(directory):
         for file in filenames:
-            if file.endswith(str(extension)):
+            if file.endswith(tuple(extensions)):
                 files.append(os.path.join(root, file))
     return files
+
 
 def load_trc_file(file_path):
     """
