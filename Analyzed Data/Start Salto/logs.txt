@@ -593,3 +593,11 @@ Filtering with Butterworth filter, 4th order, 3 Hz.
 Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/Start Salto/st_salto_good_id8_2_Sports2D/st_salto_good_id8_2_Sports2D_angles_person00.mot.
 
 Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Start Salto/st_salto_good_id8_2.mov took 12.37 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Start Salto/st_salto_bad_id14_1.mov
+On Wednesday 13. November 2024, 13:19:04
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
