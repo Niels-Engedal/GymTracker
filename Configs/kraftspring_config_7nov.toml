@@ -63,7 +63,7 @@ segment_angles = [] #['Right foot', 'Left foot', 'Right shank', 'Left shank', 'R
 
 # Processing parameters
 flip_left_right = true # Same angles whether the participant faces left/right. Set it to false if you want timeseries to be continuous even when the participent switches their stance.
-
+# Im gonna try to set flip_left_right to false, to see if it changes the weird angles we are getting
 
 [post-processing]
 interpolate = true
