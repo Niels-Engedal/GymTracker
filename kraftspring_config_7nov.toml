@@ -16,7 +16,7 @@ video_input = 'demo.mp4' # 'webcam' or '<video_path.ext>', or ['video1_path.mp4'
 
 # Video parameters
 time_range = [] # [] for the whole video, or [start_time, end_time] (in seconds), or [[start_time1, end_time1], [start_time2, end_time2], ...]
-video_dir = '/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Analyzed Videos (Mp4)' # BETWEEN SINGLE QUOTES! # If empty, result dir is current dir
+video_dir = '' # BETWEEN SINGLE QUOTES! # If empty, result dir is current dir
 
 # Webcam parameters
 webcam_id = 0 # your webcam id (0 is default)
