@@ -46,25 +46,38 @@ def plot_joint_angle(df, joint_name):
     plt.show()
 
 
-def plot_all_joints(df, joint_names):
+def plot_all_joints(df, joint_names, grid=True):
     """
     Plots all specified joint angles over time in a single plot for each participant,
-    differentiating between video numbers using line styles.
+    differentiating between video numbers using line styles. Optionally arranges the plots in a grid.
     
     Parameters:
     df (pd.DataFrame): A DataFrame containing joint angle data with columns 'time', 'participant_id',
                        'evaluation', 'video_number', and the joint columns specified in joint_names.
     joint_names (list of str): A list of joint angle column names to plot (e.g., ['right_knee', 'left_knee']).
+    grid (bool): If True, arranges the plots in a grid. Otherwise, plots one at a time.
     """
     unique_participants = df['participant_id'].unique()
     line_styles = ['-', '--', '-.', ':']  # List of line styles to differentiate videos
 
-    for participant_id in unique_participants:
+    if grid:
+        num_participants = len(unique_participants)
+        num_cols = 2  # Number of columns in the grid
+        num_rows = int(np.ceil(num_participants / num_cols))  # Calculate the number of rows
+        
+        fig, axes = plt.subplots(num_rows, num_cols, figsize=(14, 8 * num_rows))
+        axes = axes.flatten()  # Flatten to easily index if there are multiple subplots
+
+    for idx, participant_id in enumerate(unique_participants):
         # Filter data for the current participant
         participant_data = df[df['participant_id'] == participant_id]
         evaluation = participant_data['evaluation'].iloc[0]  # Get the evaluation type
         
-        plt.figure(figsize=(14, 8))
+        if grid:
+            ax = axes[idx]
+        else:
+            plt.figure(figsize=(14, 8))
+            ax = plt.gca()  # Get current axis
         
         # Plot all specified joint angles for the participant, differentiating by video number
         unique_videos = participant_data['video_number'].unique()
@@ -74,16 +87,26 @@ def plot_all_joints(df, joint_names):
             
             for joint_name in joint_names:
                 if joint_name in video_data.columns:
-                    plt.plot(video_data['time'], video_data[joint_name],
-                             label=f'Video {video_number} - {joint_name.replace("_", " ").title()}',
-                             linestyle=current_line_style)
+                    ax.plot(video_data['time'], video_data[joint_name],
+                            label=f'Video {video_number} - {joint_name.replace("_", " ").title()}',
+                            linestyle=current_line_style)
                 else:
                     print(f"Warning: '{joint_name}' not found for {participant_id} in Video {video_number}")
         
         # Set plot details
-        plt.xlabel('Time (s)')
-        plt.ylabel('Angle (degrees)')
-        plt.title(f'Joint Angles Over Time for {participant_id} ({evaluation})')
-        plt.legend()
-        plt.grid(True)
+        ax.set_xlabel('Time (s)')
+        ax.set_ylabel('Angle (degrees)')
+        ax.set_title(f'Joint Angles Over Time for {participant_id} ({evaluation})')
+        ax.legend()
+        ax.grid(True)
+        
+        if not grid:
+            plt.show()
+
+    if grid:
+        # Hide any unused subplots
+        for j in range(idx + 1, len(axes)):
+            fig.delaxes(axes[j])
+        
+        plt.tight_layout()
         plt.show()
