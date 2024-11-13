@@ -30,7 +30,7 @@ save_vid = true
 save_img = false
 save_pose = true
 save_angles = true
-result_dir = 'Analyzed Data/Start Salto' # BETWEEN SINGLE QUOTES! # If empty, project dir is current dir
+result_dir = '../Analyzed Data/Start Salto' # BETWEEN SINGLE QUOTES! # If empty, project dir is current dir
 
 
 ##########################

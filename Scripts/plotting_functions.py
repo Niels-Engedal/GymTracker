@@ -110,3 +110,40 @@ def plot_all_joints(df, joint_names, grid=True, fig_size = (14, 8)):
         
         plt.tight_layout()
         plt.show()
+
+
+
+def plot_hip_trajectory(df):
+    """
+    Plots the hip position (X and Y) for multiple participants from a combined DataFrame,
+    distinguishing between 'good' and 'bad' participants by line style.
+    
+    Parameters:
+    df (pd.DataFrame): A DataFrame containing motion capture data with columns 'Hip_X', 'Hip_Y',
+                       'participant_id', and 'evaluation'.
+    """
+    plt.figure(figsize=(12, 6))
+    
+    # Generate a color map for unique participants
+    unique_participants = df['participant_id'].unique()
+    colors = plt.cm.tab20(np.linspace(0, 1, len(unique_participants)))
+    color_map = {participant: color for participant, color in zip(unique_participants, colors)}
+    
+    # Plot hip trajectory for each participant
+    for participant_id in unique_participants:
+        participant_data = df[df['participant_id'] == participant_id]
+        if 'Hip_X' in participant_data.columns and 'Hip_Y' in participant_data.columns:
+            evaluation = participant_data['evaluation'].iloc[0]  # Get the evaluation value for the participant
+            line_style = '-' if evaluation == 'good' else '--'
+            plt.plot(participant_data['Hip_X'], participant_data['Hip_Y'],
+                     label=f'{evaluation} - {participant_id}',
+                     color=color_map[participant_id], linestyle=line_style)
+        else:
+            print(f"Warning: 'Hip_X' or 'Hip_Y' not found for {participant_id}")
+    
+    plt.xlabel('X Position (m)')
+    plt.ylabel('Y Position (m)')
+    plt.title('Hip Position in X-Y Plane Over Time for Multiple Participants')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
