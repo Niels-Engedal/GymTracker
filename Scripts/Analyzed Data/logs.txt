@@ -1,0 +1,150 @@
+
+
+---------------------------------------------------------------------
+Processing ../Videos to Analyze/Kraft/kraft_good_id2_1.mp4
+On Wednesday 13. November 2024, 12:16:46
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_good_id2_1_Sports2D/kraft_good_id2_1_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_good_id2_1_Sports2D/kraft_good_id2_1_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_good_id2_1_Sports2D/kraft_good_id2_1_Sports2D_angles_person00.mot.
+
+Processing ../Videos to Analyze/Kraft/kraft_good_id2_1.mp4 took 18.75 s.
+
+
+---------------------------------------------------------------------
+Processing ../Videos to Analyze/Kraft/kraft_bad_id3_1_nmspeed.mp4
+On Wednesday 13. November 2024, 12:17:04
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id3_1_nmspeed_Sports2D/kraft_bad_id3_1_nmspeed_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id3_1_nmspeed_Sports2D/kraft_bad_id3_1_nmspeed_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id3_1_nmspeed_Sports2D/kraft_bad_id3_1_nmspeed_Sports2D_angles_person00.mot.
+
+Processing ../Videos to Analyze/Kraft/kraft_bad_id3_1_nmspeed.mp4 took 9.31 s.
+
+
+---------------------------------------------------------------------
+Processing ../Videos to Analyze/Kraft/kraft_bad_id5_1_nmspeed.mp4
+On Wednesday 13. November 2024, 12:17:14
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id5_1_nmspeed_Sports2D/kraft_bad_id5_1_nmspeed_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id5_1_nmspeed_Sports2D/kraft_bad_id5_1_nmspeed_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id5_1_nmspeed_Sports2D/kraft_bad_id5_1_nmspeed_Sports2D_angles_person00.mot.
+
+Processing ../Videos to Analyze/Kraft/kraft_bad_id5_1_nmspeed.mp4 took 9.09 s.
+
+
+---------------------------------------------------------------------
+Processing ../Videos to Analyze/Kraft/kraft_bad_id1_1_normal_speed.mp4
+On Wednesday 13. November 2024, 12:17:23
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id1_1_normal_speed_Sports2D/kraft_bad_id1_1_normal_speed_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id1_1_normal_speed_Sports2D/kraft_bad_id1_1_normal_speed_Sports2D_px_person00.trc.
+- Person 1: Less than 4 valid frames. Deleting person.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id1_1_normal_speed_Sports2D/kraft_bad_id1_1_normal_speed_Sports2D_angles_person00.mot.
+- Person 1: Less than 4 valid frames. Deleting person.
+
+Processing ../Videos to Analyze/Kraft/kraft_bad_id1_1_normal_speed.mp4 took 9.85 s.
+
+
+---------------------------------------------------------------------
+Processing ../Videos to Analyze/Kraft/kraft_bad_id5_2_nmspeed.mp4
+On Wednesday 13. November 2024, 12:17:33
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id5_2_nmspeed_Sports2D/kraft_bad_id5_2_nmspeed_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id5_2_nmspeed_Sports2D/kraft_bad_id5_2_nmspeed_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Scripts/Analyzed Data/kraft_bad_id5_2_nmspeed_Sports2D/kraft_bad_id5_2_nmspeed_Sports2D_angles_person00.mot.
+
+Processing ../Videos to Analyze/Kraft/kraft_bad_id5_2_nmspeed.mp4 took 10.79 s.
+
+
+---------------------------------------------------------------------
+Processing ../Videos to Analyze/Kraft/kraft_bad_id1_2_nmspeed.mp4
+On Wednesday 13. November 2024, 12:17:44
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
