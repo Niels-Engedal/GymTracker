@@ -147,3 +147,81 @@ def plot_hip_trajectory(df):
     plt.legend()
     plt.grid(True)
     plt.show()
+
+def plot_segmented_joint_trajectory(
+    df,
+    joint_name,
+    participants=None,
+    condition=None,
+    ground_y_threshold=None,
+    phase_data=None,
+    title="Segmented Joint Trajectory",
+    x_label="X Coordinate",
+    y_label="Y Coordinate",
+):
+    """
+    Plots the 2D trajectory of a given joint and colors different phases (Take-off, Grouped, Off-Grouped, Landing).
+
+    Parameters:
+    df (pd.DataFrame): DataFrame containing the trajectory data.
+    joint_name (str): The name of the joint (e.g., "RAnkle").
+    participants (list, optional): List of participant IDs to include. If None, includes all participants.
+    condition (str, optional): Filter by condition (e.g., "pure" or "pettlep"). Defaults to None.
+    ground_y_threshold (float, optional): Y-value threshold for ground visualization. Defaults to None.
+    phase_data (dict, optional): Phase information with time intervals for different phases.
+    title (str, optional): Title of the plot.
+    x_label (str, optional): Label for the x-axis.
+    y_label (str, optional): Label for the y-axis.
+
+    Returns:
+    None: Displays the plot.
+    """
+    # Filter participants if specified
+    if participants:
+        df = df[df["participant_id"].isin(participants)]
+
+    # Filter condition if specified
+    if condition:
+        df = df[df["condition"] == condition]
+
+    # Extract joint data
+    x_col = f"{joint_name}_X"
+    y_col = f"{joint_name}_Y"
+
+    # Ensure required columns exist
+    if x_col not in df.columns or y_col not in df.columns:
+        raise ValueError(f"Columns {x_col} and {y_col} not found in the dataframe.")
+
+    plt.figure(figsize=(10, 6))
+
+    # Plot the phases if phase_data is provided
+    if phase_data:
+        for phase, (start_time, end_time) in phase_data.items():
+            phase_df = df[(df["time"] >= start_time) & (df["time"] <= end_time)]
+            plt.plot(
+                phase_df[x_col],
+                phase_df[y_col],
+                label=f"{phase} Phase",
+                alpha=0.7,
+                linewidth=2,
+            )
+
+    else:
+        # Plot the whole trajectory without phases
+        for participant, group in df.groupby("participant_id"):
+            plt.plot(group[x_col], group[y_col], label=f"Participant {participant}", alpha=0.7)
+
+    # Add ground threshold line if provided
+    if ground_y_threshold is not None:
+        plt.axhline(ground_y_threshold, color="red", linestyle="--", label="Ground Threshold")
+
+    # Plot formatting
+    plt.title(title)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.axhline(0, color="black", linestyle="--", linewidth=0.5)
+    plt.axvline(0, color="black", linestyle="--", linewidth=0.5)
+    plt.legend()
+    plt.grid(True)
+    plt.axis("equal")
+    plt.show()
