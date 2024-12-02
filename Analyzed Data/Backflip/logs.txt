@@ -1,8 +1,8 @@
 
 
 ---------------------------------------------------------------------
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_3.mov
-On Monday 02. December 2024, 10:33:02
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id2_2_pure.mov
+On Monday 02. December 2024, 10:50:23
 ---------------------------------------------------------------------
 
 Valid MPS installation found: using ONNXRuntime backend with GPU.
@@ -12,24 +12,24 @@ Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average
 
 Processing video stream...
 Video processing completed.
-Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_3_Sports2D/backflip_good_idn_3_Sports2D.mp4.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id2_2_pure_Sports2D/id2_2_pure_Sports2D.mp4.
 
 Post-processing pose:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz.
-Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_3_Sports2D/backflip_good_idn_3_Sports2D_px_person00.trc.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id2_2_pure_Sports2D/id2_2_pure_Sports2D_px_person00.trc.
 
 Post-processing angles:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz. 
-Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_3_Sports2D/backflip_good_idn_3_Sports2D_angles_person00.mot.
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id2_2_pure_Sports2D/id2_2_pure_Sports2D_angles_person00.mot.
 
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_3.mov took 16.54 s.
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id2_2_pure.mov took 18.77 s.
 
 
 ---------------------------------------------------------------------
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_2.mov
-On Monday 02. December 2024, 10:33:18
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id2_1_baseline.mov
+On Monday 02. December 2024, 10:50:41
 ---------------------------------------------------------------------
 
 Valid MPS installation found: using ONNXRuntime backend with GPU.
@@ -39,24 +39,24 @@ Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average
 
 Processing video stream...
 Video processing completed.
-Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_2_Sports2D/backflip_good_idn_2_Sports2D.mp4.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id2_1_baseline_Sports2D/id2_1_baseline_Sports2D.mp4.
 
 Post-processing pose:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz.
-Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_2_Sports2D/backflip_good_idn_2_Sports2D_px_person00.trc.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id2_1_baseline_Sports2D/id2_1_baseline_Sports2D_px_person00.trc.
 
 Post-processing angles:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz. 
-Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_2_Sports2D/backflip_good_idn_2_Sports2D_angles_person00.mot.
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id2_1_baseline_Sports2D/id2_1_baseline_Sports2D_angles_person00.mot.
 
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_2.mov took 20.51 s.
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id2_1_baseline.mov took 16.45 s.
 
 
 ---------------------------------------------------------------------
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_1.mov
-On Monday 02. December 2024, 10:33:39
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id1_3_pettlep.mov
+On Monday 02. December 2024, 10:50:58
 ---------------------------------------------------------------------
 
 Valid MPS installation found: using ONNXRuntime backend with GPU.
@@ -66,24 +66,24 @@ Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average
 
 Processing video stream...
 Video processing completed.
-Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_1_Sports2D/backflip_good_idn_1_Sports2D.mp4.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_3_pettlep_Sports2D/id1_3_pettlep_Sports2D.mp4.
 
 Post-processing pose:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz.
-Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_1_Sports2D/backflip_good_idn_1_Sports2D_px_person00.trc.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_3_pettlep_Sports2D/id1_3_pettlep_Sports2D_px_person00.trc.
 
 Post-processing angles:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz. 
-Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_1_Sports2D/backflip_good_idn_1_Sports2D_angles_person00.mot.
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_3_pettlep_Sports2D/id1_3_pettlep_Sports2D_angles_person00.mot.
 
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_1.mov took 21.63 s.
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id1_3_pettlep.mov took 15.99 s.
 
 
 ---------------------------------------------------------------------
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_5.mov
-On Monday 02. December 2024, 10:34:00
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id1_1_baseline.mov
+On Monday 02. December 2024, 10:51:14
 ---------------------------------------------------------------------
 
 Valid MPS installation found: using ONNXRuntime backend with GPU.
@@ -93,24 +93,24 @@ Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average
 
 Processing video stream...
 Video processing completed.
-Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_5_Sports2D/backflip_good_idn_5_Sports2D.mp4.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_1_baseline_Sports2D/id1_1_baseline_Sports2D.mp4.
 
 Post-processing pose:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz.
-Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_5_Sports2D/backflip_good_idn_5_Sports2D_px_person00.trc.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_1_baseline_Sports2D/id1_1_baseline_Sports2D_px_person00.trc.
 
 Post-processing angles:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz. 
-Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_5_Sports2D/backflip_good_idn_5_Sports2D_angles_person00.mot.
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_1_baseline_Sports2D/id1_1_baseline_Sports2D_angles_person00.mot.
 
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_5.mov took 18.30 s.
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id1_1_baseline.mov took 20.92 s.
 
 
 ---------------------------------------------------------------------
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_4.mov
-On Monday 02. December 2024, 10:34:19
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id1_2_baseline.mov
+On Monday 02. December 2024, 10:51:35
 ---------------------------------------------------------------------
 
 Valid MPS installation found: using ONNXRuntime backend with GPU.
@@ -120,16 +120,16 @@ Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average
 
 Processing video stream...
 Video processing completed.
-Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_4_Sports2D/backflip_good_idn_4_Sports2D.mp4.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_2_baseline_Sports2D/id1_2_baseline_Sports2D.mp4.
 
 Post-processing pose:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz.
-Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_4_Sports2D/backflip_good_idn_4_Sports2D_px_person00.trc.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_2_baseline_Sports2D/id1_2_baseline_Sports2D_px_person00.trc.
 
 Post-processing angles:
 - Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
 Filtering with Butterworth filter, 4th order, 3 Hz. 
-Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_4_Sports2D/backflip_good_idn_4_Sports2D_angles_person00.mot.
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_2_baseline_Sports2D/id1_2_baseline_Sports2D_angles_person00.mot.
 
-Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/backflip_good_idn_4.mov took 16.33 s.
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id1_2_baseline.mov took 20.54 s.

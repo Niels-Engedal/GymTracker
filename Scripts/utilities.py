@@ -117,19 +117,20 @@ def load_mot_file(file_path):
 
 def extract_identifiers(file_path):
     """
-    Extracts move, evaluation, participant ID, video number, and person tracked from the file path.
+    Extracts move, condition, participant ID, video number, and person tracked from the file path.
     
     Parameters:
     file_path (str): The path to the file.
     
     Returns:
-    tuple: A tuple containing move, evaluation, participant ID, video number, and person tracked.
+    tuple: A tuple containing move, condition, participant ID, video number, and person tracked.
     """
     # Regex to extract identifiers from the path after "Sports2D/"
-    match = re.search(r"Sports2D/([^_]+)_(good|bad)_id(\d+)_(\d+)_.*_(person\d+)", file_path)
+    match = re.search(r"Sports2D/id(\d+)_(\d+)_(baseline|pure|pettlep)_.*_(person\d+)", file_path)
+    print(f"For filepath: {file_path}, Match status: {match}")
     if match:
-        move, evaluation, participant_id, video_number, person_tracked = match.groups()
-        return move, evaluation, f"id{participant_id}_{person_tracked}", video_number
+        participant_id, video_number, condition, person_tracked = match.groups()
+        return participant_id, video_number, condition, person_tracked
     else:
         raise ValueError(f"Cannot extract identifiers from the file path: {file_path}")
 
@@ -148,7 +149,7 @@ def load_multiple_files(file_paths, file_type='trc'):
     
     for path in file_paths:
         try:
-            move, evaluation, participant_key, video_number = extract_identifiers(path)
+            participant_id, video_number, condition, person_tracked = extract_identifiers(path)
             
             if file_type == 'trc':
                 _, data_df = load_trc_file(path)
@@ -159,10 +160,10 @@ def load_multiple_files(file_paths, file_type='trc'):
                     data_df[key] = value
             
             # Add participant-specific information as new columns
-            data_df['participant_id'] = participant_key
-            data_df['move'] = move
-            data_df['evaluation'] = evaluation
+            data_df['participant_id'] = participant_id
             data_df['video_number'] = video_number
+            data_df['condition'] = condition
+            data_df['person_tracked'] = person_tracked
             
             data_list.append(data_df)
         
@@ -175,22 +176,22 @@ def load_multiple_files(file_paths, file_type='trc'):
 
 def compare_joint_angles(df, move, joint_angle, participant_id_good, participant_id_bad):
     """
-    Compares joint angles for a specific move and joint between a "good" and "bad" evaluation for two participants using DTW.
+    Compares joint angles for a specific move and joint between a "good" and "bad" condition for two participants using DTW.
     
     Parameters:
     df (pd.DataFrame): DataFrame containing time-series data.
     move (str): The name of the move to filter.
     joint_angle (str): The joint angle column to compare (e.g., 'right_knee').
-    participant_id_good (str): The participant_id for the "good" evaluation.
-    participant_id_bad (str): The participant_id for the "bad" evaluation.
+    participant_id_good (str): The participant_id for the "good" condition.
+    participant_id_bad (str): The participant_id for the "bad" condition.
     
     Returns:
-    dict: A summary of DTW distances between "good" and "bad" evaluations, with statistics.
+    dict: A summary of DTW distances between "good" and "bad" conditions, with statistics.
     """
-    # Filter data for the "good" and "bad" evaluations for the specific move and joint angle
-    data_good = df[(df['move'] == move) & (df['evaluation'] == 'good') & 
+    # Filter data for the "good" and "bad" conditions for the specific move and joint angle
+    data_good = df[(df['move'] == move) & (df['condition'] == 'good') & 
                    (df['participant_id'] == participant_id_good)][joint_angle].values
-    data_bad = df[(df['move'] == move) & (df['evaluation'] == 'bad') & 
+    data_bad = df[(df['move'] == move) & (df['condition'] == 'bad') & 
                   (df['participant_id'] == participant_id_bad)][joint_angle].values
 
     # Check if we have data
@@ -216,7 +217,7 @@ def compare_joint_angles(df, move, joint_angle, participant_id_good, participant
         'all_distances': distances
     }
 
-    print(f"Summary of DTW distances for {joint_angle} during {move} between 'good' (ID: {participant_id_good}) and 'bad' (ID: {participant_id_bad}) evaluations:")
+    print(f"Summary of DTW distances for {joint_angle} during {move} between 'good' (ID: {participant_id_good}) and 'bad' (ID: {participant_id_bad}) conditions:")
     print(f"Mean Distance: {distance_summary['mean_distance']}")
     
     return distance_summary
@@ -231,13 +232,13 @@ def compare_aggregated_joint_angles(df, move, joint_angle):
     joint_angle (str): The joint angle column to compare (e.g., 'right_knee').
     
     Returns:
-    dict: A summary of DTW distances between aggregated "good" and "bad" evaluations, with statistics.
+    dict: A summary of DTW distances between aggregated "good" and "bad" conditions, with statistics.
     """
     # Create aggregated data by setting the same 'participant_id' for all entries in "good" and "bad"
-    df_good = df[(df['move'] == move) & (df['evaluation'] == 'good')].copy()
+    df_good = df[(df['move'] == move) & (df['condition'] == 'good')].copy()
     df_good['participant_id'] = 'aggregated_good'
     
-    df_bad = df[(df['move'] == move) & (df['evaluation'] == 'bad')].copy()
+    df_bad = df[(df['move'] == move) & (df['condition'] == 'bad')].copy()
     df_bad['participant_id'] = 'aggregated_bad'
 
     # Combine the dataframes to have a unified structure for comparison

@@ -1,4 +1,4 @@
-PathFileType	4	(X/Y/Z)	/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/backflip_good_idn_3_Sports2D/backflip_good_idn_3_Sports2D_px_person00.trc
+PathFileType	4	(X/Y/Z)	/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_3_pettlep_Sports2D/id1_3_pettlep_Sports2D_px_person00.trc
 DataRate	CameraRate	NumFrames	NumMarkers	Units	OrigDataRate	OrigDataStartFrame	OrigNumFrames
 59.90876837303599	59.90876837303599	198	22	m	59.90876837303599	0	198
 Frame#	Time	Hip			RHip			RKnee			RAnkle			RBigToe			RSmallToe			RHeel			LHip			LKnee			LAnkle			LBigToe			LSmallToe			LHeel			Neck			Head			Nose			RShoulder			RElbow			RWrist			LShoulder			LElbow			LWrist		
