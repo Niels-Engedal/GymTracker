@@ -225,6 +225,8 @@ def plot_joint_trajectory(
     x_label="X Coordinate",
     y_label="Y Coordinate",
     ground_y_threshold=None,
+    ylim=[0, 1080],
+    xlim=[0, 1920],
 ):
     """
     Plots the 2D trajectory of a given joint for specified participants or their mean.
@@ -284,4 +286,6 @@ def plot_joint_trajectory(
     plt.legend()
     plt.grid(True)
     plt.axis("equal")
+    #plt.ylim(ylim[0], ylim[1]) 
+    #plt.xlim(xlim[0], xlim[1])
     plt.show()

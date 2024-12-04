@@ -53,14 +53,19 @@ def overlay_joint_trajectory(
     trajectory = df[[x_col, y_col, "time"]].dropna()
     print(f"Initial trajectory data (first 5 rows):\n{trajectory.head()}")
 
-    # Normalize X and Y to video resolution
-    trajectory[x_col] = np.interp(
+    # Scale X and Y coordinates properly
+    #trajectory[x_col] = trajectory[x_col] * 1000
+    #trajectory[y_col] = trajectory[y_col] * -1000
+    #print(f"Trajectory after scaling (first 5 rows):\n{trajectory.head()}")
+
+    # Normalize to video resolution
+    """trajectory[x_col] = np.interp(
         trajectory[x_col], (trajectory[x_col].min(), trajectory[x_col].max()), (0, width)
     )
     trajectory[y_col] = np.interp(
         trajectory[y_col], (trajectory[y_col].min(), trajectory[y_col].max()), (0, height)
-    )
-    print(f"Trajectory after scaling (first 5 rows):\n{trajectory.head()}")
+    )"""
+    print(f"Trajectory after normalization (first 5 rows):\n{trajectory.head()}")
 
     # Invert Y-axis to match video coordinates
     trajectory[y_col] = height - trajectory[y_col]
