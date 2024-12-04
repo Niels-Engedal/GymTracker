@@ -70,7 +70,7 @@ interpolate = true
 interp_gap_smaller_than = 10 # do not interpolate bigger gaps
 fill_large_gaps_with = 'last_value' # 'last_value', 'nan', or 'zeros' 
 
-filter = true
+filter = true # originally true, niels set to false to test
 show_graphs = false # Show plots of raw and processed results
 filter_type = 'butterworth' # butterworth, gaussian, LOESS, median
    [post-processing.butterworth]
