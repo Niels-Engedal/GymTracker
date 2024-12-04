@@ -40,6 +40,7 @@ def overlay_joint_trajectory(
     fourcc = cv2.VideoWriter_fourcc(*"avc1")  # Use H.264 codec
     out = cv2.VideoWriter(output_path, fourcc, frame_rate, (width, height))
     print(f"Output video will be saved at: {output_path}")
+    print(f"Video as aspect: {width}x{height}")
 
     # Extract joint trajectory data
     x_col = f"{joint_name}_X"
