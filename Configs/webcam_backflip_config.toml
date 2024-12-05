@@ -24,8 +24,8 @@ input_size = [1920, 1080] # [W, H]. Lower resolution will be faster but less pre
 
 
 [process]
-multiperson = true # Multiperson involves tracking: will be faster if false
-show_realtime_results = true # niels change
+multiperson = false # Multiperson involves tracking: will be faster if false # niels changed to false for webcam
+show_realtime_results = false
 save_vid = true
 save_img = false
 save_pose = true
@@ -39,7 +39,7 @@ result_dir = '/Users/niels/Desktop/University/Third Semester/Perception and Acti
 [pose]
 # Pose detection parameters
 pose_model = 'body_with_feet' # Only body_with_feet is available for now
-mode = 'balanced' # 'lightweight', 'balanced', or 'performance'
+mode = 'lightweight' # 'lightweight', 'balanced', or 'performance' # niels changed to lightweight for webcam
 det_frequency = 1 # Run person detection only every N frames, and inbetween track previously detected bounding boxes (keypoint detection is still run on all frames). 
                   # Equal to or greater than 1, can be as high as you want in simple uncrowded cases. Much faster, but might be less accurate. 
 tracking_mode = 'sports2d' # 'rtmlib' or 'sports2d'. 'sports2d' is generally much more accurate and comparable in speed
