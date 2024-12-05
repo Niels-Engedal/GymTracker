@@ -198,10 +198,11 @@ def scale_coordinates(merged_df):
     return merged_df
 
 def main():
-    joint_to_overlay = "RElbow"  # Joint to overlay on the video
+    joint_to_overlay = "RKnee"  # Joint to overlay on the video
     frame_rate = 30
     num_videos = 1  # Number of videos per condition
-    duration = 3  # Duration of each video in seconds
+    duration = 5  # Duration of each video in seconds
+    visualize_velocity = "color"  # Options: "thickness", "color", "both"
 
     # Set paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -288,7 +289,8 @@ def main():
                         df=merged_df,
                         joint_name=joint_to_overlay,
                         output_path=overlay_path,
-                        frame_rate=frame_rate
+                        frame_rate=frame_rate,
+                        visualize_velocity=visualize_velocity
                     )
                     print(f"Overlay saved to: {overlay_path}")
                     print("Displaying overlay...")
