@@ -260,7 +260,7 @@ def main():
     for _ in range(num_videos):
         if input("Is the participant ready? (Y/n): ").strip().lower() == 'y':
             print(f"Recording {condition} video {video_number}...")
-            video_filename = capture_video(participant_id, video_number, condition, video_dir, duration=15, frame_rate=frame_rate)
+            video_filename = capture_video(participant_id, video_number, condition, video_dir, duration=duration, frame_rate=frame_rate)
             if video_filename:
                 process_video_with_sports2d(video_filename, config)
                 try:
