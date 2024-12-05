@@ -20,6 +20,7 @@ def overlay_joint_trajectory(
     None
     """
     print("Starting overlay process...")
+    print()
 
     # Validate input file extension
     input_extension = os.path.splitext(video_path)[-1].lower()
@@ -27,6 +28,7 @@ def overlay_joint_trajectory(
         raise ValueError("Input video must be .mov or .mp4 format.")
 
     print(f"Opening video: {video_path}")
+    print()
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
         print("Error: Could not open video file.")
@@ -36,11 +38,13 @@ def overlay_joint_trajectory(
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     print(f"Video properties: width={width}, height={height}, frame_rate={frame_rate}")
+    print()
 
     # Prepare output video
     fourcc = cv2.VideoWriter_fourcc(*"avc1")  # Use H.264 codec
     out = cv2.VideoWriter(output_path, fourcc, frame_rate, (width, height))
     print(f"Output video will be saved at: {output_path}")
+    print()
 
     # Extract joint trajectory data
     x_col = f"{joint_name}_X"
@@ -48,6 +52,7 @@ def overlay_joint_trajectory(
     vel_col = f"{joint_name}_velocity"
 
     print(f"Looking for columns: {x_col}, {y_col}, {vel_col}")
+    print()
     if x_col not in df.columns or y_col not in df.columns or vel_col not in df.columns:
         print(f"Error: Columns {x_col}, {y_col}, or {vel_col} not found in DataFrame.")
         return
@@ -59,7 +64,8 @@ def overlay_joint_trajectory(
     velocity_min = trajectory[vel_col].min()
     velocity_max = trajectory[vel_col].max()
     trajectory["velocity_normalized"] = (trajectory[vel_col] - velocity_min) / (velocity_max - velocity_min)
-    print(f"Velocity normalized (first 5 rows):\n{trajectory[['velocity_normalized']].head()}")
+    #print(f"Velocity normalized (first 5 rows):\n{trajectory[['velocity_normalized']].head()}")
+    #print()
 
     # Initialize a blank image to draw the persistent trajectory
     persistent_traj = np.zeros((height, width, 3), dtype=np.uint8)
@@ -67,6 +73,7 @@ def overlay_joint_trajectory(
     prev_x, prev_y = None, None
     frame_idx = 0
     print("Starting video frame processing...")
+    print()
 
     while True:
         ret, frame = cap.read()
@@ -90,7 +97,7 @@ def overlay_joint_trajectory(
             else:
                 color = (0, 255, 0)  # Default green color
 
-            print(f"Frame {frame_idx}: Drawing line with thickness={thickness}, color={color}")
+            #print(f"Frame {frame_idx}: Drawing line with thickness={thickness}, color={color}")
 
             # Draw trajectory on the persistent image
             if prev_x is not None and prev_y is not None:
@@ -109,6 +116,7 @@ def overlay_joint_trajectory(
     cap.release()
     out.release()
     print(f"Annotated video saved as MP4 at {output_path}")
+    print()
 
 
 

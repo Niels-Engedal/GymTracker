@@ -211,13 +211,13 @@ def main():
     overlay_dir = "/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Overlay Videos"
     os.makedirs(overlay_dir, exist_ok=True)  # Ensure the overlay directory exists
 
-    print(f"Video directory: {video_dir}")
-    print(f"Backflip data directory: {backflip_data_dir}")
-    print(f"Overlay directory: {overlay_dir}")
+    #print(f"Video directory: {video_dir}")
+    #print(f"Backflip data directory: {backflip_data_dir}")
+    #print(f"Overlay directory: {overlay_dir}")
 
     # Load the configuration file
     config_path = os.path.normpath(os.path.join(script_dir, "../Configs/webcam_backflip_config.toml"))
-    print(f"Config file: {config_path}")
+    #print(f"Config file: {config_path}")
     config = Sports2D.read_config_file(config_path)
 
     # Get user input
@@ -231,10 +231,13 @@ def main():
     video_number = 1
 
     # Record and process baseline videos
+    print()
     print(f"Starting {num_videos} baseline videos...")
+    print()
     for _ in range(num_videos):
         if input("Is the participant ready? (Y/n): ").strip().lower() == 'y':
             print(f"Recording baseline video {video_number}...")
+            print()
             video_filename = capture_video(participant_id, video_number, "baseline", video_dir, duration=duration, frame_rate=frame_rate)
             if video_filename:
                 process_video_with_sports2d(video_filename, config)
@@ -254,6 +257,7 @@ def main():
                 csv_filename = os.path.join(backflip_data_dir, os.path.basename(video_filename).replace(".mov", ".csv"))
                 merged_df.to_csv(csv_filename, index=False)
                 print(f"Baseline data saved to {csv_filename}")
+                print()
             video_number += 1
 
     # Record and process videos based on condition
@@ -261,6 +265,7 @@ def main():
     for _ in range(num_videos):
         if input("Is the participant ready? (Y/n): ").strip().lower() == 'y':
             print(f"Recording {condition} video {video_number}...")
+            print()
             video_filename = capture_video(participant_id, video_number, condition, video_dir, duration=duration, frame_rate=frame_rate)
             if video_filename:
                 process_video_with_sports2d(video_filename, config)
@@ -280,6 +285,7 @@ def main():
                 csv_filename = os.path.join(backflip_data_dir, os.path.basename(video_filename).replace(".mov", ".csv"))
                 merged_df.to_csv(csv_filename, index=False)
                 print(f"{condition.capitalize()} data saved to {csv_filename}")
+                print()
 
                 # Generate overlay or display video based on condition
                 if condition == "trajectory":
@@ -293,10 +299,13 @@ def main():
                         visualize_velocity=visualize_velocity
                     )
                     print(f"Overlay saved to: {overlay_path}")
+                    print()
                     print("Displaying overlay...")
+                    print()
                     os.system(f"open \"{overlay_path}\"")  # Ensure the path is quoted for spaces
                 elif condition == "pure":
                     print("Displaying video...")
+                    print()
                     os.system(f"open {video_filename}")  # macOS; adjust for Windows/Linux
             video_number += 1
 
