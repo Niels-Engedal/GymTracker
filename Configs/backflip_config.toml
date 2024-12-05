@@ -19,7 +19,7 @@ time_range = [] # [] for the whole video, or [start_time, end_time] (in seconds)
 video_dir = '' # BETWEEN SINGLE QUOTES! # If empty, result dir is current dir
 
 # Webcam parameters
-webcam_id = 0 # your webcam id (0 is default)
+webcam_id = 1 # your webcam id (0 is default) # 1 is default on macbook
 input_size = [1920, 1080] # [W, H]. Lower resolution will be faster but less precise. # originally 1280, 720 Niels change
 
 

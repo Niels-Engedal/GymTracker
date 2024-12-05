@@ -69,8 +69,8 @@ def overlay_joint_trajectory(
     print(f"Trajectory after normalization (first 5 rows):\n{trajectory.head()}")
 
     # Invert Y-axis to match video coordinates
-    trajectory[y_col] = height - trajectory[y_col]
-    print(f"Trajectory after Y-axis inversion (first 5 rows):\n{trajectory.head()}")
+    #trajectory[y_col] = height - trajectory[y_col]
+    #print(f"Trajectory after Y-axis inversion (first 5 rows):\n{trajectory.head()}")
 
     # Initialize a blank image to draw the persistent trajectory
     persistent_traj = np.zeros((height, width, 3), dtype=np.uint8)
@@ -112,3 +112,47 @@ def overlay_joint_trajectory(
     cap.release()
     out.release()
     print(f"Annotated video saved as MP4 at {output_path}")
+
+
+def overlay_videos_for_folder(folder_path, merged_df_scaled, joint_name, output_folder):
+    # Ensure the output folder exists
+    os.makedirs(output_folder, exist_ok=True)
+    
+    # Iterate through all video files in the folder
+    for video_file in os.listdir(folder_path):
+        if video_file.endswith(".mov"):  # Adjust if other video formats are included
+            try:
+                # Parse the ID and video number from the video file name
+                # Assuming the video filename follows the format 'id<number>_<number>_baseline.mov'
+                parts = video_file.split('_')
+                participant_id = parts[0][2:]  # Extract ID after 'id'
+                video_number = parts[1]       # Extract video number
+                
+                # Create video_df dynamically for the current video
+                video_df = merged_df_scaled[
+                    (merged_df_scaled["participant_id"] == participant_id) &
+                    (merged_df_scaled["video_number"] == video_number)
+                ].copy()  # Use .copy() to avoid modifying the original DataFrame
+                
+                if video_df.empty:
+                    print(f"No matching data found for {video_file}")
+                    continue
+                
+                # Adjust RAnkle_Y as specified
+                #video_df['RAnkle_Y'] += 250
+                
+                # Construct paths
+                video_path = os.path.join(folder_path, video_file)
+                output_path = os.path.join(output_folder, f"{video_file.split('.')[0]}_overlay_{joint_name}.mp4")
+                
+                # Call the overlay function
+                overlay_joint_trajectory(
+                    video_path=video_path,
+                    df=video_df,
+                    joint_name=joint_name,
+                    output_path=output_path,
+                    frame_rate=60  # Adjust if your video has a different frame rate
+                )
+                print(f"Processed and saved overlay video for {video_file}")
+            except Exception as e:
+                print(f"Error processing {video_file}: {e}")
