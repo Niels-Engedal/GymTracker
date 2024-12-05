@@ -114,25 +114,33 @@ def load_mot_file(file_path):
 
     return metadata, data_df
 
+import re
 
 def extract_identifiers(file_path):
     """
-    Extracts move, condition, participant ID, video number, and person tracked from the file path.
-    
+    Extracts participant_id, video_number, condition, and person_tracked from a file path.
+
     Parameters:
-    file_path (str): The path to the file.
-    
+        file_path (str): The path to the file (e.g., "id4_1_baseline.mov" or "id4_1_baseline_Sports2D_px_person00.trc").
+
     Returns:
-    tuple: A tuple containing move, condition, participant ID, video number, and person tracked.
+        tuple: A tuple containing participant_id, video_number, condition, and person_tracked (default is "person00").
     """
-    # Regex to extract identifiers from the path after "Sports2D/"
-    match = re.search(r"Sports2D/id(\d+)_(\d+)_(baseline|pure|pettlep)_.*_(person\d+)", file_path)
-    print(f"For filepath: {file_path}, Match status: {match}")
-    if match:
-        participant_id, video_number, condition, person_tracked = match.groups()
-        return participant_id, video_number, condition, person_tracked
-    else:
+    # Match identifiers in the file path
+    match = re.search(r"id(\d+)_(\d+)_(baseline|pure|trajectory)", file_path)
+    if not match:
         raise ValueError(f"Cannot extract identifiers from the file path: {file_path}")
+
+    # Extract common identifiers
+    participant_id, video_number, condition = match.groups()
+
+    # Check for person_tracked in the file name (optional)
+    person_match = re.search(r"person(\d+)", file_path)
+    person_tracked = f"person{person_match.group(1)}" if person_match else "person00"
+
+    return participant_id, video_number, condition, person_tracked
+
+
 
 def load_multiple_files(file_paths, file_type='trc'):
     """

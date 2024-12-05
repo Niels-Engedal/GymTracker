@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from Sports2D import Sports2D  # Assuming sports2d is installed
 from video_overlay import overlay_joint_trajectory, overlay_videos_for_folder  # Assuming you have this function
-from utilities import list_filepaths, load_trc_file, load_mot_file
+from utilities import list_filepaths, load_trc_file, load_mot_file, extract_identifiers
 
 def get_user_input():
     """Prompt user for participant ID and assigned condition."""
@@ -13,13 +13,9 @@ def get_user_input():
     assigned_condition = input("Enter Assigned Condition (baseline, pure, trajectory): ")
     return participant_id, assigned_condition
 
-import os
-import cv2
-import time
-
 def capture_video(participant_id, video_number, condition, video_dir, duration=10, width=1920, height=1080, frame_rate=60):
     """
-    Capture a video using the webcam and save it to the provided directory.
+    Capture a video using the webcam and save it to the provided directory after cutting the first second.
     
     Parameters:
         participant_id (str): ID of the participant.
@@ -38,7 +34,7 @@ def capture_video(participant_id, video_number, condition, video_dir, duration=1
     os.makedirs(video_dir, exist_ok=True)
 
     # Construct the full video path
-    video_filename = f"{participant_id}_{video_number}_{condition}.mov"
+    video_filename = f"id{participant_id}_{video_number}_{condition}.mov"
     video_path = os.path.join(video_dir, video_filename)
 
     # Open the webcam (camera ID 1 for macOS)
@@ -47,9 +43,8 @@ def capture_video(participant_id, video_number, condition, video_dir, duration=1
         print("Error: Webcam could not be opened.")
         return None
 
-    # Setup video writer
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for .mov files
-    out = cv2.VideoWriter(video_path, fourcc, frame_rate, (width, height))
+    # Temporary storage for frames
+    frames = []
     print(f"Recording video: {video_path}")
     start_time = time.time()
     
@@ -57,7 +52,7 @@ def capture_video(participant_id, video_number, condition, video_dir, duration=1
     while int(time.time() - start_time) < duration:
         ret, frame = cap.read()
         if ret:
-            out.write(frame)
+            frames.append(frame)  # Store frames in memory
             cv2.imshow("Recording", frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 print("Recording stopped by user.")
@@ -66,13 +61,27 @@ def capture_video(participant_id, video_number, condition, video_dir, duration=1
             print("Error capturing frame.")
             break
 
-    # Release resources
     cap.release()
-    out.release()
     cv2.destroyAllWindows()
-    
-    print(f"Video saved: {video_path}")
-    return video_path
+
+    # Remove the first second of frames
+    frames_to_skip = frame_rate  # Number of frames to skip (1 second of footage)
+    trimmed_frames = frames[frames_to_skip:]
+
+    # Save the trimmed video
+    if trimmed_frames:
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for .mov files
+        out = cv2.VideoWriter(video_path, fourcc, frame_rate, (width, height))
+
+        for frame in trimmed_frames:
+            out.write(frame)
+        out.release()
+        print(f"Trimmed video saved: {video_path}")
+        return video_path
+    else:
+        print("Error: Not enough frames to save after trimming.")
+        return None
+
 
 
 def process_video_with_sports2d(video_filename, config):
@@ -83,27 +92,65 @@ def process_video_with_sports2d(video_filename, config):
     except Exception as e:
         print(f"Error processing video {video_filename}: {e}")
 
-def load_and_combine_trc_mot_data(backflip_data_dir):
-    """Load TRC and MOT data, combine, and remove the depth axis."""
+def load_and_combine_trc_mot_data(backflip_data_dir, video_filename):
+    """
+    Load TRC and MOT data for a specific video, combine, and remove the depth axis.
+    
+    Parameters:
+        backflip_data_dir (str): Path to the directory containing .trc and .mot files.
+        video_filename (str): Filename of the captured video (e.g., "id1_1_baseline.mov").
+    
+    Returns:
+        pd.DataFrame: Combined DataFrame with depth axis removed.
+    """
+    # Extract metadata from the video filename
+    participant_id, video_number, condition, _ = extract_identifiers(video_filename)
+
+    # Find all TRC and MOT files in the directory
     trc_file_paths = list_filepaths(backflip_data_dir, '.trc')
     mot_file_paths = list_filepaths(backflip_data_dir, '.mot')
-    print(f"Found {len(trc_file_paths)} TRC files and {len(mot_file_paths)} MOT files.") # DEBUG
-    
-    # Load the first TRC and MOT files using custom functions
-    trc_combined = load_trc_file(trc_file_paths[0])
-    mot_combined = load_mot_file(mot_file_paths[0])
-    
+
+    # Filter files for the specific video
+    trc_file = next(
+        (path for path in trc_file_paths if f"id{participant_id}_{video_number}_{condition}" in path), None
+    )
+    mot_file = next(
+        (path for path in mot_file_paths if f"id{participant_id}_{video_number}_{condition}" in path), None
+    )
+
+    if not trc_file or not mot_file:
+        raise FileNotFoundError(f"No TRC or MOT files found for video: {video_filename}")
+
+    # Load the TRC and MOT files
+    _, trc_combined = load_trc_file(trc_file)  # Extract the DataFrame from the tuple
+    _, mot_combined = load_mot_file(mot_file)  # Extract the DataFrame from the tuple
+
+    # Add metadata to the DataFrames
+    trc_combined['participant_id'] = participant_id
+    trc_combined['video_number'] = video_number
+    trc_combined['condition'] = condition
+    trc_combined['person_tracked'] = "person0"  # Default value (adjust if needed)
+
+    mot_combined['participant_id'] = participant_id
+    mot_combined['video_number'] = video_number
+    mot_combined['condition'] = condition
+    mot_combined['person_tracked'] = "person0"  # Default value (adjust if needed)
+
     # Rename the 'Time' column in the TRC data
-    trc_combined = trc_combined.rename(columns={"Time": "time"})
+    if "Time" in trc_combined.columns:
+        trc_combined = trc_combined.rename(columns={"Time": "time"})
+    else:
+        raise KeyError("'Time' column is missing in the TRC file.")
 
     # Merge TRC and MOT dataframes on shared keys
     merged_df = pd.merge(
-        trc_combined, mot_combined,
+        trc_combined,
+        mot_combined,
         on=["time", "participant_id", "video_number", "condition", "person_tracked"],
         how="inner"
     )
-    
-    # Step 1: Identify remaining axes in the DataFrame
+
+    # Remove the depth axis
     coordinate_cols = [col for col in merged_df.columns if any(col.endswith(axis) for axis in ["_X", "_Y", "_Z"])]
     joint_names = set(col.rsplit('_', 1)[0] for col in coordinate_cols)  # Extract unique joint names
     remaining_axes = {"X", "Y", "Z"} & set(axis[-1] for axis in coordinate_cols if axis[-2:] in {"_X", "_Y", "_Z"})
@@ -120,14 +167,16 @@ def load_and_combine_trc_mot_data(backflip_data_dir):
         depth_axis = min(variance_results, key=variance_results.get)
         print(f"Depth axis identified as: {depth_axis}")
 
-        # Step 2: Remove depth coordinate columns if they exist
+        # Remove depth coordinate columns
         depth_cols = [f"{joint}_{depth_axis}" for joint in joint_names if f"{joint}_{depth_axis}" in merged_df.columns]
         merged_df = merged_df.drop(columns=depth_cols, errors="ignore")
         print(f"Columns removed: {depth_cols}")
     else:
         print(f"Depth axis removal skipped. Remaining axes: {remaining_axes}")
-    
+
     return merged_df
+
+
 
 
 def calculate_derived_metrics(merged_df):
@@ -168,34 +217,78 @@ def scale_coordinates(merged_df):
     return merged_df
 
 def main():
-    script_dir = os.getcwd()
-    video_dir = os.path.normpath(os.path.join(script_dir, "../Videos to Analyze/Webcam_Backflips"))
+    joint_to_overlay = "RKnee"  # Joint to overlay on the video
+    frame_rate = 30
+
+    # Set paths
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    video_dir = "/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips"
+    backflip_data_dir = "/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip"
+    overlay_dir = "/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Overlay Videos"
+    os.makedirs(overlay_dir, exist_ok=True)  # Ensure the overlay directory exists
+
+    print(f"Video directory: {video_dir}")
+    print(f"Backflip data directory: {backflip_data_dir}")
+    print(f"Overlay directory: {overlay_dir}")
+
+    # Load the configuration file
+    config_path = os.path.normpath(os.path.join(script_dir, "../Configs/webcam_backflip_config.toml"))
+    print(f"Config file: {config_path}")
+    config = Sports2D.read_config_file(config_path)
+
+    # Get user input
     participant_id, condition = get_user_input()
 
-    config_path = os.path.normpath(os.path.join(script_dir, "../Configs/backflip_config.toml"))
-    print(f"Config file: {config_path}")
-    config = config = Sports2D.read_config_file(config_path)
-
-    for video_number in range(1, 6): # change here if you want e.g. 10 videos
+    for video_number in range(1, 6):  # Change this for more videos
         if input("Is the participant ready? (Y/n): ").strip().lower() == 'y':
-            video_filename = capture_video(participant_id, video_number, condition, video_dir, duration=4)
+            print("Recording video in 3 seconds")
+            time.sleep(1)
+            print("Recording video in 2 seconds")
+            time.sleep(1)
+            print("Recording video in 1 second")
+            time.sleep(1)
+            print("Recording video now...")
+
+            # Capture the video
+            video_filename = capture_video(participant_id, video_number, condition, video_dir, duration=15, frame_rate=frame_rate)
             if video_filename:
+                # Process the video with Sports2D
                 process_video_with_sports2d(video_filename, config)
-                
-                backflip_data_dir = "path_to_backflip_data"  # Set correct path
-                merged_df = load_and_combine_trc_mot_data(backflip_data_dir)
+
+                # Load and combine TRC and MOT data for the specific video
+                try:
+                    merged_df = load_and_combine_trc_mot_data(backflip_data_dir, video_filename)
+                except FileNotFoundError as e:
+                    print(f"Error: {e}")
+                    continue
+
+                # Perform calculations on the data
                 merged_df = calculate_derived_metrics(merged_df)
                 merged_df = calculate_relative_angles(merged_df)
                 merged_df = scale_coordinates(merged_df)
-                
-                csv_filename = video_filename.replace(".mov", ".csv")
+
+                # Save the combined data as CSV
+                csv_filename = os.path.join(backflip_data_dir, os.path.basename(video_filename).replace(".mov", ".csv"))
                 merged_df.to_csv(csv_filename, index=False)
                 print(f"Data saved to {csv_filename}")
-                
+
+                # Generate overlay if the condition is "trajectory"
                 if condition == "trajectory":
-                    overlay_videos_for_folder("folder_path", merged_df, "RKnee", "output_folder")
-                    
+                    overlay_path = os.path.join(overlay_dir, f"{os.path.basename(video_filename).replace('.mov', '_overlay.mp4')}")
+                    overlay_joint_trajectory(
+                        video_path=video_filename,
+                        df=merged_df,
+                        joint_name=joint_to_overlay,
+                        output_path=overlay_path,
+                        frame_rate=frame_rate
+                    )
+                    print(f"Overlay saved to: {overlay_path}")
+
+                    # Display the overlay (optional, for immediate feedback)
+                    print("Displaying overlay...")
+                    os.system(f"open {overlay_path}")  # macOS; adjust for Windows/Linux
                 print(f"Video {video_number} processed.")
+
                 
 if __name__ == "__main__":
     main()

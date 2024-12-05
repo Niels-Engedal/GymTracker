@@ -19,18 +19,18 @@ time_range = [] # [] for the whole video, or [start_time, end_time] (in seconds)
 video_dir = '' # BETWEEN SINGLE QUOTES! # If empty, result dir is current dir
 
 # Webcam parameters
-webcam_id = 0 # your webcam id (0 is default) # 1 is default on macbook
+webcam_id = 1 # your webcam id (0 is default) # 1 is default on macbook
 input_size = [1920, 1080] # [W, H]. Lower resolution will be faster but less precise. # originally 1280, 720 Niels change
 
 
 [process]
 multiperson = true # Multiperson involves tracking: will be faster if false
-show_realtime_results = false
+show_realtime_results = true # niels change
 save_vid = true
 save_img = false
 save_pose = true
 save_angles = true
-result_dir = '../Analyzed Data/Backflip' # BETWEEN SINGLE QUOTES! # If empty, project dir is current dir
+result_dir = '/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip' # BETWEEN SINGLE QUOTES! # If empty, project dir is current dir
 
 
 ##########################
