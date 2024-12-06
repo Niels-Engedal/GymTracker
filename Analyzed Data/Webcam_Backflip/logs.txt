@@ -1087,3 +1087,1042 @@ Filtering with Butterworth filter, 4th order, 3 Hz.
 Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id20_2_trajectory_Sports2D/id20_2_trajectory_Sports2D_angles_person00.mot.
 
 Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id20_2_trajectory.mov took 10.00 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id13_1_baseline.mov
+On Thursday 05. December 2024, 14:08:13
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id13_1_baseline_Sports2D/id13_1_baseline_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id13_1_baseline_Sports2D/id13_1_baseline_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id13_1_baseline_Sports2D/id13_1_baseline_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id13_1_baseline.mov took 10.72 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id13_2_trajectory.mov
+On Thursday 05. December 2024, 14:08:44
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id13_2_trajectory_Sports2D/id13_2_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id13_2_trajectory_Sports2D/id13_2_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id13_2_trajectory_Sports2D/id13_2_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id13_2_trajectory.mov took 9.96 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/idid 15_1_trajectory.mov
+On Thursday 05. December 2024, 18:51:13
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/idid 15_1_trajectory_Sports2D/idid 15_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/idid 15_1_trajectory_Sports2D/idid 15_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/idid 15_1_trajectory_Sports2D/idid 15_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/idid 15_1_trajectory.mov took 13.51 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id15_1_baseline.mov
+On Thursday 05. December 2024, 18:52:12
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id15_1_baseline_Sports2D/id15_1_baseline_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id15_1_baseline_Sports2D/id15_1_baseline_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id15_1_baseline_Sports2D/id15_1_baseline_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id15_1_baseline.mov took 12.99 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id15_2_trajectory.mov
+On Thursday 05. December 2024, 18:52:40
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id15_2_trajectory_Sports2D/id15_2_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id15_2_trajectory_Sports2D/id15_2_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id15_2_trajectory_Sports2D/id15_2_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id15_2_trajectory.mov took 11.98 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id16_1_trajectory.mov
+On Thursday 05. December 2024, 19:14:20
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id16_1_trajectory_Sports2D/id16_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id16_1_trajectory_Sports2D/id16_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id16_1_trajectory_Sports2D/id16_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id16_1_trajectory.mov took 10.89 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id17_1_trajectory.mov
+On Thursday 05. December 2024, 19:17:21
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id17_1_trajectory_Sports2D/id17_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id17_1_trajectory_Sports2D/id17_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id17_1_trajectory_Sports2D/id17_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id17_1_trajectory.mov took 11.35 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id18_1_trajectory.mov
+On Thursday 05. December 2024, 19:20:48
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id18_1_trajectory_Sports2D/id18_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id18_1_trajectory_Sports2D/id18_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id18_1_trajectory_Sports2D/id18_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id18_1_trajectory.mov took 19.31 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_1_trajectory.mov
+On Thursday 05. December 2024, 19:22:13
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_1_trajectory_Sports2D/id19_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_1_trajectory_Sports2D/id19_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_1_trajectory_Sports2D/id19_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_1_trajectory.mov took 10.88 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_2_trajectory.mov
+On Thursday 05. December 2024, 19:23:52
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_2_trajectory_Sports2D/id19_2_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_2_trajectory_Sports2D/id19_2_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_2_trajectory_Sports2D/id19_2_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_2_trajectory.mov took 11.04 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_3_trajectory.mov
+On Thursday 05. December 2024, 19:25:04
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_3_trajectory_Sports2D/id19_3_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_3_trajectory_Sports2D/id19_3_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_3_trajectory_Sports2D/id19_3_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_3_trajectory.mov took 10.45 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_4_trajectory.mov
+On Thursday 05. December 2024, 19:25:51
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_4_trajectory_Sports2D/id19_4_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_4_trajectory_Sports2D/id19_4_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_4_trajectory_Sports2D/id19_4_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_4_trajectory.mov took 10.79 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_5_trajectory.mov
+On Thursday 05. December 2024, 19:26:56
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_5_trajectory_Sports2D/id19_5_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_5_trajectory_Sports2D/id19_5_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id19_5_trajectory_Sports2D/id19_5_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id19_5_trajectory.mov took 10.53 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_1_trajectory.mov
+On Thursday 05. December 2024, 19:28:47
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_1_trajectory_Sports2D/id1_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_1_trajectory_Sports2D/id1_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_1_trajectory_Sports2D/id1_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_1_trajectory.mov took 11.16 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_2_trajectory.mov
+On Thursday 05. December 2024, 19:29:30
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_2_trajectory_Sports2D/id1_2_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_2_trajectory_Sports2D/id1_2_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_2_trajectory_Sports2D/id1_2_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_2_trajectory.mov took 10.90 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_3_trajectory.mov
+On Thursday 05. December 2024, 19:30:20
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_3_trajectory_Sports2D/id1_3_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_3_trajectory_Sports2D/id1_3_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_3_trajectory_Sports2D/id1_3_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_3_trajectory.mov took 11.03 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_4_trajectory.mov
+On Thursday 05. December 2024, 19:31:45
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_4_trajectory_Sports2D/id1_4_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_4_trajectory_Sports2D/id1_4_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_4_trajectory_Sports2D/id1_4_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_4_trajectory.mov took 10.24 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_5_trajectory.mov
+On Thursday 05. December 2024, 19:32:28
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_5_trajectory_Sports2D/id1_5_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_5_trajectory_Sports2D/id1_5_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_5_trajectory_Sports2D/id1_5_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_5_trajectory.mov took 10.27 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_6_trajectory.mov
+On Thursday 05. December 2024, 19:33:18
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_6_trajectory_Sports2D/id1_6_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_6_trajectory_Sports2D/id1_6_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_6_trajectory_Sports2D/id1_6_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_6_trajectory.mov took 11.10 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_7_trajectory.mov
+On Thursday 05. December 2024, 19:34:07
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_7_trajectory_Sports2D/id1_7_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_7_trajectory_Sports2D/id1_7_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_7_trajectory_Sports2D/id1_7_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_7_trajectory.mov took 10.72 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_8_trajectory.mov
+On Thursday 05. December 2024, 19:37:18
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_8_trajectory_Sports2D/id1_8_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_8_trajectory_Sports2D/id1_8_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_8_trajectory_Sports2D/id1_8_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_8_trajectory.mov took 10.39 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_9_trajectory.mov
+On Thursday 05. December 2024, 19:43:06
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_9_trajectory_Sports2D/id1_9_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_9_trajectory_Sports2D/id1_9_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id1_9_trajectory_Sports2D/id1_9_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id1_9_trajectory.mov took 10.64 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id2_1_trajectory.mov
+On Thursday 05. December 2024, 19:45:31
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id2_1_trajectory_Sports2D/id2_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id2_1_trajectory_Sports2D/id2_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id2_1_trajectory_Sports2D/id2_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id2_1_trajectory.mov took 10.98 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id2_2_trajectory.mov
+On Thursday 05. December 2024, 19:47:56
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id2_2_trajectory_Sports2D/id2_2_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id2_2_trajectory_Sports2D/id2_2_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id2_2_trajectory_Sports2D/id2_2_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id2_2_trajectory.mov took 10.34 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id2_3_trajectory.mov
+On Thursday 05. December 2024, 19:49:03
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id2_3_trajectory_Sports2D/id2_3_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id2_3_trajectory_Sports2D/id2_3_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id2_3_trajectory_Sports2D/id2_3_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id2_3_trajectory.mov took 10.51 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id3_1_trajectory.mov
+On Thursday 05. December 2024, 19:51:03
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in performance mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id3_1_trajectory_Sports2D/id3_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id3_1_trajectory_Sports2D/id3_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id3_1_trajectory_Sports2D/id3_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id3_1_trajectory.mov took 22.82 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id3_2_trajectory.mov
+On Thursday 05. December 2024, 19:51:53
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in performance mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id3_2_trajectory_Sports2D/id3_2_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id3_2_trajectory_Sports2D/id3_2_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id3_2_trajectory_Sports2D/id3_2_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id3_2_trajectory.mov took 21.87 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id4_1_trajectory.mov
+On Thursday 05. December 2024, 19:54:11
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_1_trajectory_Sports2D/id4_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_1_trajectory_Sports2D/id4_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_1_trajectory_Sports2D/id4_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id4_1_trajectory.mov took 11.14 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id4_2_trajectory.mov
+On Thursday 05. December 2024, 19:56:04
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_2_trajectory_Sports2D/id4_2_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_2_trajectory_Sports2D/id4_2_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_2_trajectory_Sports2D/id4_2_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id4_2_trajectory.mov took 10.35 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id4_3_trajectory.mov
+On Thursday 05. December 2024, 19:56:55
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_3_trajectory_Sports2D/id4_3_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_3_trajectory_Sports2D/id4_3_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_3_trajectory_Sports2D/id4_3_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id4_3_trajectory.mov took 10.31 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id4_4_trajectory.mov
+On Thursday 05. December 2024, 19:58:16
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_4_trajectory_Sports2D/id4_4_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_4_trajectory_Sports2D/id4_4_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id4_4_trajectory_Sports2D/id4_4_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id4_4_trajectory.mov took 10.62 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_1_trajectory.mov
+On Thursday 05. December 2024, 20:00:57
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_1_trajectory_Sports2D/id5_1_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_1_trajectory_Sports2D/id5_1_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_1_trajectory_Sports2D/id5_1_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_1_trajectory.mov took 12.86 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_2_trajectory.mov
+On Thursday 05. December 2024, 20:02:17
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_2_trajectory_Sports2D/id5_2_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_2_trajectory_Sports2D/id5_2_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_2_trajectory_Sports2D/id5_2_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_2_trajectory.mov took 12.09 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_3_trajectory.mov
+On Thursday 05. December 2024, 20:03:22
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_4_trajectory.mov
+On Thursday 05. December 2024, 20:03:59
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_4_trajectory_Sports2D/id5_4_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_4_trajectory_Sports2D/id5_4_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_4_trajectory_Sports2D/id5_4_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_4_trajectory.mov took 12.02 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_5_trajectory.mov
+On Thursday 05. December 2024, 20:05:01
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_5_trajectory_Sports2D/id5_5_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_5_trajectory_Sports2D/id5_5_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_5_trajectory_Sports2D/id5_5_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_5_trajectory.mov took 11.87 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_6_trajectory.mov
+On Thursday 05. December 2024, 20:06:10
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_6_trajectory_Sports2D/id5_6_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_6_trajectory_Sports2D/id5_6_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_6_trajectory_Sports2D/id5_6_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_6_trajectory.mov took 12.22 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_7_trajectory.mov
+On Thursday 05. December 2024, 20:07:22
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_7_trajectory_Sports2D/id5_7_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_7_trajectory_Sports2D/id5_7_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_7_trajectory_Sports2D/id5_7_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_7_trajectory.mov took 11.81 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_8_trajectory.mov
+On Thursday 05. December 2024, 22:23:39
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_8_trajectory_Sports2D/id5_8_trajectory_Sports2D.mp4.
+
+Post-processing pose:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz.
+Pose saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_8_trajectory_Sports2D/id5_8_trajectory_Sports2D_px_person00.trc.
+
+Post-processing angles:
+- Person 0: Interpolating missing sequences if they are smaller than 10 frames. Large gaps filled with last_value.
+Filtering with Butterworth filter, 4th order, 3 Hz. 
+Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_8_trajectory_Sports2D/id5_8_trajectory_Sports2D_angles_person00.mot.
+
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_8_trajectory.mov took 12.85 s.

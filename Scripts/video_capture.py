@@ -198,10 +198,10 @@ def scale_coordinates(merged_df):
     return merged_df
 
 def main():
-    joint_to_overlay = "RKnee"  # Joint to overlay on the video
+    joint_to_overlay = "Hip"  # Joint to overlay on the video
     frame_rate = 30
-    num_videos = 1  # Number of videos per condition
-    duration = 5  # Duration of each video in seconds
+    num_videos = 10  # Number of videos per condition
+    duration = 6  # Duration of each video in seconds
     visualize_velocity = "color"  # Options: "thickness", "color", "both"
 
     # Set paths
@@ -230,7 +230,7 @@ def main():
     # Video number starts at 1 and increments sequentially
     video_number = 1
 
-    # Record and process baseline videos
+    """# Record and process baseline videos
     print()
     print(f"Starting {num_videos} baseline videos...")
     print()
@@ -258,7 +258,7 @@ def main():
                 merged_df.to_csv(csv_filename, index=False)
                 print(f"Baseline data saved to {csv_filename}")
                 print()
-            video_number += 1
+            video_number += 1"""
 
     # Record and process videos based on condition
     print(f"Starting {num_videos} {condition} videos...")
@@ -308,9 +308,6 @@ def main():
                     print()
                     os.system(f"open {video_filename}")  # macOS; adjust for Windows/Linux
             video_number += 1
-
-
-
                 
 if __name__ == "__main__":
     main()
