@@ -970,3 +970,261 @@ Filtering with Butterworth filter, 4th order, 3 Hz.
 Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id1_2_baseline_Sports2D/id1_2_baseline_Sports2D_angles_person00.mot.
 
 Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Backflip/id1_2_baseline.mov took 20.84 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/MasterBackflip/id6_1_baseline.mp4
+On Friday 06. December 2024, 11:06:09
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Failed to grab frame 421.
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id6_1_baseline_Sports2D/id6_1_baseline_Sports2D.mp4.
+
+Post-processing pose:
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/MasterBackflip/id250_1_baseline.mov
+On Friday 06. December 2024, 11:08:14
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id250_1_baseline_Sports2D/id250_1_baseline_Sports2D.mp4.
+
+Post-processing pose:
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/MasterBackflip/id250_1_baseline.mov
+On Friday 06. December 2024, 11:11:50
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Failed to grab frame 458.
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id250_1_baseline_Sports2D/id250_1_baseline_Sports2D.mp4.
+
+Post-processing pose:
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/MasterBackflip/id250_1_baseline.mov
+On Friday 06. December 2024, 11:13:56
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id250_1_baseline_Sports2D/id250_1_baseline_Sports2D.mp4.
+
+Post-processing pose:
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/MasterBackflip/id250_1_baseline.mov
+On Friday 06. December 2024, 11:20:31
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in lightweight mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is selected.
+Parameters: tracking_mode='sports2d', keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Backflip/id250_1_baseline_Sports2D/id250_1_baseline_Sports2D.mp4.
+
+Post-processing pose:

@@ -230,7 +230,7 @@ def main():
     # Video number starts at 1 and increments sequentially
     video_number = 1
 
-    """# Record and process baseline videos
+    # Record and process baseline videos
     print()
     print(f"Starting {num_videos} baseline videos...")
     print()
@@ -258,7 +258,7 @@ def main():
                 merged_df.to_csv(csv_filename, index=False)
                 print(f"Baseline data saved to {csv_filename}")
                 print()
-            video_number += 1"""
+            video_number += 1
 
     # Record and process videos based on condition
     print(f"Starting {num_videos} {condition} videos...")

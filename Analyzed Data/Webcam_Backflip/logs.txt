@@ -2126,3 +2126,93 @@ Filtering with Butterworth filter, 4th order, 3 Hz.
 Angles saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id5_8_trajectory_Sports2D/id5_8_trajectory_Sports2D_angles_person00.mot.
 
 Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips/id5_8_trajectory.mov took 12.85 s.
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/MasterBackflip/id250_1_baseline.mov
+On Friday 06. December 2024, 11:15:11
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Failed to grab frame 298.
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id250_1_baseline_Sports2D/id250_1_baseline_Sports2D.mp4.
+
+Post-processing pose:
+
+
+---------------------------------------------------------------------
+Processing /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/MasterBackflip/id250_1_baseline.mov
+On Friday 06. December 2024, 11:19:48
+---------------------------------------------------------------------
+
+Valid MPS installation found: using ONNXRuntime backend with GPU.
+Pose tracking set up for BodyWithFeet model in balanced mode.
+Persons are detected every 1 frames and tracked inbetween. Multi-person is not selected.
+Parameters: keypoint_likelihood_threshold=0.3, average_likelihood_threshold=0.5, keypoint_number_threshold=0.3
+
+Processing video stream...
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Failed to grab frame 232.
+Video processing completed.
+Processed video saved to /Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Analyzed Data/Webcam_Backflip/id250_1_baseline_Sports2D/id250_1_baseline_Sports2D.mp4.
+
+Post-processing pose:
