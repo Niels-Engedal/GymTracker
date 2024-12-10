@@ -6,6 +6,33 @@ import numpy as np
 from Sports2D import Sports2D  # Assuming sports2d is installed
 from video_overlay import overlay_joint_trajectory, overlay_videos_for_folder  # Assuming you have this function
 from utilities import list_filepaths, load_trc_file, load_mot_file, extract_identifiers
+import simpleaudio as sa
+import moviepy
+
+def sonify_velocity(velocity, min_freq=200, max_freq=1000, duration=0.033, sample_rate=44100):
+    """
+    Generate a tone based on velocity.
+    
+    Parameters:
+        velocity (float): Angular velocity to map to frequency.
+        min_freq (int): Minimum frequency (Hz) for mapping.
+        max_freq (int): Maximum frequency (Hz) for mapping.
+        duration (float): Duration of each tone segment (seconds).
+        sample_rate (int): Sample rate for audio (Hz).
+    
+    Returns:
+        np.ndarray: Generated audio waveform.
+    """
+    # Normalize velocity to frequency range
+    freq = max(min_freq, min(max_freq, int(min_freq + (velocity * (max_freq - min_freq)))))
+    
+    # Generate a sine wave
+    t = np.linspace(0, duration, int(sample_rate * duration), False)
+    wave = 0.5 * np.sin(2 * np.pi * freq * t)  # 0.5 to reduce amplitude
+    
+    # Convert to 16-bit PCM format
+    return wave
+
 
 def get_user_input():
     """Prompt user for participant ID and assigned condition."""
@@ -38,7 +65,7 @@ def capture_video(participant_id, video_number, condition, video_dir, duration=1
     video_path = os.path.join(video_dir, video_filename)
 
     # Open the webcam (camera ID 1 for macOS)
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0) # trying 0 instead of 1
     if not cap.isOpened():
         print("Error: Webcam could not be opened.")
         return None
@@ -173,7 +200,7 @@ def calculate_derived_metrics(merged_df):
         merged_df[f"{joint}_velocity"] = np.sqrt(sum(comp**2 for comp in velocity_components))
     
     # Angular velocity
-    angular_cols = ["right_knee", "left_knee", "left_ankle", "right_ankle", "left_hip"]
+    angular_cols = ["right_knee", "left_knee", "left_ankle", "right_ankle", "left_hip", "right_hip"] # I think we can calculate right_hip as well.
     for col in angular_cols:
         if col in merged_df:
             merged_df[f"{col}_ang_vel"] = merged_df[col].diff() / merged_df["time"].diff()
@@ -200,8 +227,8 @@ def scale_coordinates(merged_df):
 def main():
     joint_to_overlay = "Hip"  # Joint to overlay on the video
     frame_rate = 30
-    num_videos = 10  # Number of videos per condition
-    duration = 6  # Duration of each video in seconds
+    num_videos = 1  # Number of videos per condition
+    duration = 10  # Duration of each video in seconds
     visualize_velocity = "color"  # Options: "thickness", "color", "both"
 
     # Set paths
@@ -211,13 +238,8 @@ def main():
     overlay_dir = "/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Overlay Videos"
     os.makedirs(overlay_dir, exist_ok=True)  # Ensure the overlay directory exists
 
-    #print(f"Video directory: {video_dir}")
-    #print(f"Backflip data directory: {backflip_data_dir}")
-    #print(f"Overlay directory: {overlay_dir}")
-
     # Load the configuration file
     config_path = os.path.normpath(os.path.join(script_dir, "../Configs/webcam_backflip_config.toml"))
-    #print(f"Config file: {config_path}")
     config = Sports2D.read_config_file(config_path)
 
     # Get user input
@@ -290,6 +312,23 @@ def main():
                 # Generate overlay or display video based on condition
                 if condition == "trajectory":
                     overlay_path = os.path.join(overlay_dir, f"{os.path.basename(video_filename).replace('.mov', '_overlay.mp4')}")
+
+                    # Generate audio for right_hip_ang_vel
+                    audio_waveform = np.array([])
+                    sample_rate = 44100
+                    for _, row in merged_df.iterrows():
+                        angular_velocity = row.get("right_hip_ang_vel", 0)  # Get angular velocity
+                        audio_waveform = np.concatenate((audio_waveform, sonify_velocity(angular_velocity, sample_rate=sample_rate)))
+
+                    # Normalize and convert audio to 16-bit PCM format
+                    audio_waveform = (audio_waveform * 32767).astype(np.int16)
+
+                    # Convert 1D audio_waveform to 2D (mono audio)
+                    audio_waveform = audio_waveform.reshape(-1, 1)
+
+                    audio_clip = moviepy.audio.AudioClip.AudioArrayClip(audio_waveform, fps=sample_rate)
+
+                    # Generate the trajectory overlay video
                     overlay_joint_trajectory(
                         video_path=video_filename,
                         df=merged_df,
@@ -298,16 +337,24 @@ def main():
                         frame_rate=frame_rate,
                         visualize_velocity=visualize_velocity
                     )
-                    print(f"Overlay saved to: {overlay_path}")
-                    print()
-                    print("Displaying overlay...")
-                    print()
-                    os.system(f"open \"{overlay_path}\"")  # Ensure the path is quoted for spaces
+
+                    # Load the overlay video and add the audio
+                    video_clip = moviepy.VideoFileClip(overlay_path)
+                    video_with_audio = video_clip.with_audio(audio_clip)
+
+                    # Save the final video
+                    final_path = overlay_path.replace("_overlay.mp4", "_final.mp4")
+                    video_with_audio.write_videofile(final_path, codec="libx264", audio_codec="aac")
+                    print(f"Final trajectory video saved to: {final_path}")
+
+                    # Play the final video
+                    os.system(f"open \"{final_path}\"")  # macOS; adjust for Windows/Linux
                 elif condition == "pure":
                     print("Displaying video...")
                     print()
                     os.system(f"open {video_filename}")  # macOS; adjust for Windows/Linux
             video_number += 1
+
                 
 if __name__ == "__main__":
     main()
