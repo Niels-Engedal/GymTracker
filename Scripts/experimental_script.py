@@ -345,8 +345,10 @@ def process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_
     print(f"DEBUG: Trajectory data columns: {merged_df.columns}")
     print(f"DEBUG: Trajectory data head:\n{merged_df.head()}")
 
+    likert_options = ['1','2','3','4','5','6']
+    
     if condition == "trajectory" or condition == "pure":
-        likert_score = pyi("Enter Likert score: ")
+        likert_score = pyip.inputMenu(likert_options)
         merged_df["Likert_Score"] = likert_score # saving likert score
 
     # Save processed data
