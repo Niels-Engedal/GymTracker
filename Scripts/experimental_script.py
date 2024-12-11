@@ -344,6 +344,10 @@ def process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_
     print(f"DEBUG: Trajectory data columns: {merged_df.columns}")
     print(f"DEBUG: Trajectory data head:\n{merged_df.head()}")
 
+    if condition == "trajectory" or condition == "pure":
+        likert_score = input("Enter Likert score: ")
+        merged_df["Likert_Score"] = likert_score # saving likert score
+
     # Save processed data
     csv_filename = os.path.join(backflip_data_dir, os.path.basename(video_filename).replace(".mov", ".csv"))
     merged_df = process_and_save_data(merged_df, csv_filename)
