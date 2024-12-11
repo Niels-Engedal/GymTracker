@@ -10,6 +10,7 @@ import simpleaudio as sa
 import moviepy
 from scipy.io.wavfile import write
 import scipy.signal
+import pyinputplus as pyip
 
 # Shared Functions
 def smooth_frequencies(frequencies, smooth_factor=5):
@@ -345,7 +346,7 @@ def process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_
     print(f"DEBUG: Trajectory data head:\n{merged_df.head()}")
 
     if condition == "trajectory" or condition == "pure":
-        likert_score = input("Enter Likert score: ")
+        likert_score = pyi("Enter Likert score: ")
         merged_df["Likert_Score"] = likert_score # saving likert score
 
     # Save processed data
@@ -417,31 +418,34 @@ def main():
     config_path = os.path.normpath(os.path.join(script_dir, "../Configs/webcam_backflip_config.toml"))
     config = Sports2D.read_config_file(config_path)
 
-    mode = input("Select mode: (1) Record new videos, (2) Analyze existing video: ").strip()
-    if mode == "2":
+    mode_options = ['Record new videos', 'Analyze existing video']
+    condition_options = ['pure', 'trajectory']
+
+    mode = pyip.inputMenu(mode_options, numbered=True)
+    if mode == "Analyze existing video":
         video_path = input("Enter path to existing video: ").strip().strip('"').strip("'")
         if not os.path.isfile(video_path):
             print("Invalid file path.")
             return
-        condition = input("Enter Condition (pure or trajectory): ").strip().lower()
+        condition = pyip.inputMenu(condition_options, numbered=True)
         process_video(video_path, config, backflip_data_dir, overlay_dir, joint_to_overlay, frame_rate, visualize_velocity, condition)
         return
 
-    participant_id = input("Enter Participant ID: ")
+    participant_id = pyip.inputNum("Enter Participant ID: ")
     print(f"Starting {num_videos} baseline videos...")
     for i in range(1, num_videos + 1):
-        if input(f"Is the participant ready for baseline video {i}? (Y/n): ").strip().lower() == 'y':
+        if pyip.inputYesNo() == True:
             video_filename = capture_video(participant_id, i, "baseline", video_dir, duration, frame_rate=frame_rate)
             if video_filename:
                 process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_to_overlay, frame_rate, condition="baseline",  visualize_velocity=False,)
                 #process_and_save_data(load_and_combine_trc_mot_data(backflip_data_dir, video_filename), os.path.join(backflip_data_dir, f"baseline_{i}.csv"))
 
-    condition = input("Enter Condition (pure or trajectory): ").strip().lower()
-    if condition not in ["pure", "trajectory"]:
+    condition = pyip.inputMenu(condition_options, numbered=True)
+    if condition not in ['pure', 'trajectory']:
         print("Invalid condition.")
         return
     for i in range(1, num_videos + 1):
-        if input(f"Is the participant ready for {condition} video {i}? (Y/n): ").strip().lower() == 'y':
+        if pyip.inputYesNo() == True:
             video_filename = capture_video(participant_id, i, condition, video_dir, duration, frame_rate=frame_rate)
             if video_filename:
                 process_video(video_filename, 
