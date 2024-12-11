@@ -46,7 +46,7 @@ def generate_waveform(wave_type, frequency, amplitude, t):
 
 
 
-def sonify_value(values, frame_rate, mode="height", min_freq=50, max_freq=1000, sample_rate=44100, smooth_factor=5, wave_type="sawtooth"):
+def sonify_value(values, frame_rate, mode="height", min_freq=50, max_freq=500, sample_rate=44100, smooth_factor=5, wave_type="triangle"):
     """
     Generate a smooth continuous tone based on input values (height or angle) with optional dynamic loudness.
 
@@ -333,7 +333,7 @@ def process_and_save_data(merged_df, output_csv_path):
     return merged_df
 
 
-def process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_to_overlay, frame_rate, visualize_velocity, condition):
+def process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_to_overlay, frame_rate, visualize_velocity, condition, enable_sonification=False):
     """Process a video and handle analysis, overlays, and outputs."""
     print(f"DEBUG: Starting processing for video: {video_filename}")
     process_video_with_sports2d(video_filename, config)
@@ -354,6 +354,30 @@ def process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_
 
         # Create trajectory overlay
         overlay_joint_trajectory(video_filename, merged_df, joint_to_overlay, overlay_path, frame_rate, visualize_velocity)
+        print(f"DEBUG: Overlay video created at {overlay_path}")
+
+        # Check if sonification is enabled
+        if enable_sonification:
+            final_path = overlay_path.replace("_overlay.mp4", "_final.mp4")
+
+            # Add audio to the overlay
+            # Step 1: Save the audio file
+            audio_path = overlay_path.replace("_overlay.mp4", "_audio.wav")
+            save_audio(merged_df, frame_rate, sample_rate=44100, joint_name=joint_to_overlay, audio_path=audio_path)
+
+            # Step 2: Combine the audio with the video
+            combine_audio_and_video(overlay_path, audio_path, final_path)
+            print(f"DEBUG: Final video with sonification saved at {final_path}")
+            os.system(f"open \"{final_path}\"")
+        else:
+            print(f"DEBUG: Playing overlay video without sonification: {overlay_path}")
+            os.system(f"open \"{overlay_path}\"")
+
+        """overlay_path = os.path.join(overlay_dir, f"{os.path.basename(video_filename).replace('.mov', '_overlay.mp4')}")
+        print(f"DEBUG: Overlay path: {overlay_path}")
+
+        # Create trajectory overlay
+        overlay_joint_trajectory(video_filename, merged_df, joint_to_overlay, overlay_path, frame_rate, visualize_velocity)
         final_path = overlay_path.replace("_overlay.mp4", "_final.mp4")
         print(f"DEBUG: Final video path: {final_path}")
 
@@ -366,7 +390,7 @@ def process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_
         combine_audio_and_video(overlay_path, audio_path, final_path)
 
         print(f"DEBUG: Playing final video: {final_path}")
-        os.system(f"open \"{final_path}\"")
+        os.system(f"open \"{final_path}\"")"""
 
     elif condition == "pure":
         print(f"DEBUG: Playing pure video: {video_filename}")
@@ -378,8 +402,8 @@ def process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_
 def main():
     joint_to_overlay = "Hip"
     frame_rate = 30
-    num_videos = 3
-    duration = 10
+    num_videos = 1
+    duration = 6
     visualize_velocity = "color"
     script_dir = os.path.dirname(os.path.abspath(__file__))
     video_dir = "/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips"
@@ -416,7 +440,15 @@ def main():
         if input(f"Is the participant ready for {condition} video {i}? (Y/n): ").strip().lower() == 'y':
             video_filename = capture_video(participant_id, i, condition, video_dir, duration, frame_rate=frame_rate)
             if video_filename:
-                process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_to_overlay, frame_rate, visualize_velocity, condition)
+                process_video(video_filename, 
+                              config, 
+                              backflip_data_dir, 
+                              overlay_dir, 
+                              joint_to_overlay, 
+                              frame_rate, 
+                              visualize_velocity, 
+                              condition, 
+                              enable_sonification=False) # edit here if we want sonification
 
 
 if __name__ == "__main__":
