@@ -434,7 +434,9 @@ def main():
     participant_id = pyip.inputNum("Enter Participant ID: ")
     print(f"Starting {num_videos} baseline videos...")
     for i in range(1, num_videos + 1):
-        if pyip.inputYesNo() == True:
+        answer = pyip.inputYesNo(prompt="Is participant ready? (Yes/No): ") == 'yes' or 'y'
+        print(answer)
+        if pyip.inputYesNo(prompt="Is participant ready? (Yes/No): ") == 'yes' or 'y':
             video_filename = capture_video(participant_id, i, "baseline", video_dir, duration, frame_rate=frame_rate)
             if video_filename:
                 process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_to_overlay, frame_rate, condition="baseline",  visualize_velocity=False,)
@@ -445,7 +447,7 @@ def main():
         print("Invalid condition.")
         return
     for i in range(1, num_videos + 1):
-        if pyip.inputYesNo() == True:
+        if pyip.inputYesNo(prompt="Is participant ready? (Yes/No): ") == 'yes' or 'y':
             video_filename = capture_video(participant_id, i, condition, video_dir, duration, frame_rate=frame_rate)
             if video_filename:
                 process_video(video_filename, 
