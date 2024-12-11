@@ -292,7 +292,7 @@ def capture_video(participant_id, video_number, condition, video_dir, duration=1
     os.makedirs(video_dir, exist_ok=True)
     video_filename = f"id{participant_id}_{video_number}_{condition}.mov"
     video_path = os.path.join(video_dir, video_filename)
-    cap = cv2.VideoCapture(1) # 1 when not using discord maybe?
+    cap = cv2.VideoCapture(0) # 1 when not using discord maybe?
     if not cap.isOpened():
         print("Error: Webcam could not be opened.")
         return None
@@ -406,6 +406,13 @@ def process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_
     elif condition == "baseline":
         print(f"DEBUG: Saved baseline video: {video_filename}")
 
+def yes_to_continue(prompt="Type 'y' to continue: ", answers = ['y', 'Y']):
+    input_str = input(prompt).lower()
+    while input_str not in answers:
+        print("Invalid input. Please type 'y' to continue.")
+        input_str = input(prompt).lower()
+    return input_str
+
 def main():
     joint_to_overlay = "Hip"
     frame_rate = 30
@@ -436,7 +443,7 @@ def main():
     participant_id = pyip.inputNum("Enter Participant ID: ")
     print(f"Starting {num_videos} baseline videos...")
     for i in range(1, num_videos + 1):
-        if pyip.inputYesNo(prompt="Is participant ready? (Yes/No): ") == True:
+        if yes_to_continue() == 'y':
             video_filename = capture_video(participant_id, i, "baseline", video_dir, duration, frame_rate=frame_rate)
             if video_filename:
                 process_video(video_filename, config, backflip_data_dir, overlay_dir, joint_to_overlay, frame_rate, condition="baseline",  visualize_velocity=False,)
@@ -447,18 +454,18 @@ def main():
         print("Invalid condition.")
         return
     for i in range(1, num_videos + 1):
-        if pyip.inputYesNo(prompt="Is participant ready? (Yes/No): ") == True:
+        if yes_to_continue() == 'y':
             video_filename = capture_video(participant_id, i, condition, video_dir, duration, frame_rate=frame_rate)
             if video_filename:
                 process_video(video_filename, 
-                              config, 
-                              backflip_data_dir, 
-                              overlay_dir, 
-                              joint_to_overlay, 
-                              frame_rate, 
-                              visualize_velocity, 
-                              condition, 
-                              enable_sonification=False) # edit here if we want sonification
+                                config, 
+                                backflip_data_dir, 
+                                overlay_dir, 
+                                joint_to_overlay, 
+                                frame_rate, 
+                                visualize_velocity, 
+                                condition, 
+                                enable_sonification=False) # edit here if we want sonification
 
 
 if __name__ == "__main__":
