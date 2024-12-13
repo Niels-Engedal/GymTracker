@@ -292,7 +292,7 @@ def capture_video(participant_id, video_number, condition, video_dir, duration=1
     os.makedirs(video_dir, exist_ok=True)
     video_filename = f"id{participant_id}_{video_number}_{condition}.mov"
     video_path = os.path.join(video_dir, video_filename)
-    cap = cv2.VideoCapture(0) # 1 when not using discord maybe?
+    cap = cv2.VideoCapture(1) # 1 when not using discord maybe?
     if not cap.isOpened():
         print("Error: Webcam could not be opened.")
         return None
@@ -416,8 +416,8 @@ def yes_to_continue(prompt="Type 'y' to continue: ", answers = ['y', 'Y']):
 def main():
     joint_to_overlay = "Hip"
     frame_rate = 30
-    num_videos = 1
-    duration = 6
+    num_videos = 5
+    duration = 7
     visualize_velocity = "color"
     script_dir = os.path.dirname(os.path.abspath(__file__))
     video_dir = "/Users/niels/Desktop/University/Third Semester/Perception and Action/Exam/Gymnastics Motion Tracking/Code for Gym Tracking/Videos to Analyze/Webcam_Backflips"

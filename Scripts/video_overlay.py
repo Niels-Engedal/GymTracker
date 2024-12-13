@@ -63,6 +63,7 @@ def overlay_joint_trajectory(
     # Normalize velocity for visualization
     velocity_min = trajectory[vel_col].min()
     velocity_max = trajectory[vel_col].max()
+    print(f"Velocity range: {velocity_min} to {velocity_max}")
     trajectory["velocity_normalized"] = (trajectory[vel_col] - velocity_min) / (velocity_max - velocity_min)
     #print(f"Velocity normalized (first 5 rows):\n{trajectory[['velocity_normalized']].head()}")
     #print()
@@ -84,16 +85,18 @@ def overlay_joint_trajectory(
         if frame_idx < len(trajectory):
             x = int(trajectory.iloc[frame_idx][x_col])
             y = int(trajectory.iloc[frame_idx][y_col])
-            velocity = trajectory.iloc[frame_idx]["velocity_normalized"]
+            #velocity = trajectory.iloc[frame_idx]["velocity_normalized"]
+            velocity = trajectory.iloc[frame_idx][vel_col] 
 
             # Determine line thickness
             thickness = max(1, int(10 - velocity * 9)) if visualize_velocity in ["thickness", "both"] else 2
 
             # Determine color based on velocity (Blue-to-Orange Gradient)
             if visualize_velocity in ["color", "both"]:
-                blue = np.array([0, 0, 255], dtype=np.uint8)  # Blue in BGR
-                orange = np.array([0, 165, 255], dtype=np.uint8)  # Orange in BGR
-                color = tuple((blue + (orange - blue) * velocity).astype(int).tolist())  # Convert to tuple of integers
+                blue = np.array([255, 0, 0], dtype=np.uint8)  # Blue in BGR # changed from [0, 0, 255]
+                red = np.array([0, 0, 255], dtype=np.uint8)  # RED in BGR
+                velocity_mapped = min(velocity / 1, 1) # trying to make it non-normalized
+                color = tuple((blue + (red - blue) * velocity_mapped).astype(int).tolist())  # Convert to tuple of integers
             else:
                 color = (0, 255, 0)  # Default green color
 
