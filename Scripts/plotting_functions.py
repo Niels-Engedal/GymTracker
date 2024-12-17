@@ -286,6 +286,6 @@ def plot_joint_trajectory(
     plt.legend()
     plt.grid(True)
     plt.axis("equal")
-    #plt.ylim(ylim[0], ylim[1]) 
-    #plt.xlim(xlim[0], xlim[1])
+    plt.ylim(ylim[0], ylim[1]) 
+    plt.xlim(xlim[0], xlim[1])
     plt.show()
