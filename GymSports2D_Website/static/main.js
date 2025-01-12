@@ -39,7 +39,6 @@ uploadForm.onsubmit = async (e) => {
         const formData = new FormData();
         formData.append('video', file);
 
-        // Show progress indicator
         progressIndicator.style.display = 'block';
 
         try {
@@ -50,21 +49,30 @@ uploadForm.onsubmit = async (e) => {
 
             const result = await response.json();
 
-            if (result.path) {
-                uploadedVideo.src = result.path; // Display the processed video
+            if (result.video_path && result.data_path) {
+                // Display processed video
+                uploadedVideo.src = result.video_path;
                 uploadedVideo.style.display = 'block';
+
+                // Display link to download data
+                const dataLink = document.createElement('a');
+                dataLink.href = result.data_path;
+                dataLink.download = 'processed_data.csv'; // Download filename
+                dataLink.textContent = 'Download Processed Data';
+                document.body.appendChild(dataLink);
             } else {
                 alert('Error processing video: ' + result.error);
             }
         } catch (error) {
             alert('An error occurred: ' + error.message);
         } finally {
-            progressIndicator.style.display = 'none'; // Hide progress indicator
+            progressIndicator.style.display = 'none';
         }
     } else {
         alert('Please select a video file to upload.');
     }
 };
+
 
 
 
