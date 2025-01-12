@@ -5,6 +5,21 @@ import subprocess
 import os
 import time
 
+from Sports2D import Sports2D  # Assuming sports2d is installed
+
+from Scripts.experimental_script import (
+    smooth_frequencies,
+    generate_waveform,
+    sonify_value,
+    save_audio,
+    combine_audio_and_video,
+    process_video_with_sports2d,
+    load_and_combine_trc_mot_data,
+    scale_coordinates,
+    overlay_joint_trajectory,
+)
+
+
 
 app = Flask(__name__)
 
@@ -13,28 +28,43 @@ def index():
     return render_template('index.html')
 
 @app.route('/upload', methods=['POST'])
-def upload():
+@app.route('/upload', methods=['POST'])
+def upload_and_process():
     file = request.files['video']
     file_path = f"temp_{file.filename}"
     file.save(file_path)
 
-    # Check if the file is a .MOV
-    if file.filename.endswith('.mov') or file.filename.endswith('.MOV'):
-        converted_path = f"static/converted_{os.path.splitext(file.filename)[0]}.mp4"
-        with open('ffmpeg.log', 'w') as logfile:
-            subprocess.run(['ffmpeg', '-y', '-i', file_path, '-c:v', 'libx264', '-c:a', 'aac', converted_path],
-                        stdout=logfile, stderr=subprocess.STDOUT)
+    try:
+        # Step 1: Process Video with Sports2D
+        config_path = "path/to/config.toml"  # Update with your actual config path
+        config = Sports2D.read_config_file(config_path)
+        process_video_with_sports2d(file_path, config)
 
+        # Step 2: Load and Scale Trajectory Data
+        backflip_data_dir = "path/to/backflip_data_dir"  # Replace with actual path
+        merged_df = load_and_combine_trc_mot_data(backflip_data_dir, os.path.basename(file_path))
+        merged_df = scale_coordinates(merged_df)
 
-        # Clean up the original .MOV file
+        # Step 3: Overlay Trajectory
+        joint_name = "Hip"  # Replace with desired joint
+        output_path = f"static/processed_{os.path.splitext(file.filename)[0]}.mp4"
+        overlay_joint_trajectory(
+            video_path=file_path,
+            df=merged_df,
+            joint_name=joint_name,
+            output_path=output_path,
+            frame_rate=30,  # Adjust to match your video
+            visualize_velocity="color"
+        )
+
+        # Step 4: Clean Up Temporary Files
         os.remove(file_path)
-        # Clean up old files
-        cleanup_static_folder()
-        
-        # Return the path to the converted video
-        return jsonify({'status': 'Video converted successfully!', 'path': f'/{converted_path}'})
 
-    return jsonify({'status': 'Video processed successfully!', 'path': file_path})
+        # Step 5: Serve the Processed Video
+        return jsonify({'status': 'Video processed successfully!', 'path': f'/{output_path}'})
+    except Exception as e:
+        print(f"Error processing video: {e}")
+        return jsonify({'status': 'Error processing video', 'error': str(e)})
 
 
 def cleanup_static_folder():

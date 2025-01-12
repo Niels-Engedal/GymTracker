@@ -51,20 +51,20 @@ uploadForm.onsubmit = async (e) => {
             const result = await response.json();
 
             if (result.path) {
-                uploadedVideo.src = result.path; // Display the converted video
+                uploadedVideo.src = result.path; // Display the processed video
                 uploadedVideo.style.display = 'block';
             } else {
-                alert('Video processing failed.');
+                alert('Error processing video: ' + result.error);
             }
         } catch (error) {
-            alert('An error occurred while uploading the video.');
+            alert('An error occurred: ' + error.message);
         } finally {
-            // Hide progress indicator
-            progressIndicator.style.display = 'none';
+            progressIndicator.style.display = 'none'; // Hide progress indicator
         }
     } else {
         alert('Please select a video file to upload.');
     }
 };
+
 
 
