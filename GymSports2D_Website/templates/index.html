@@ -3,17 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Take a Picture</title>
+    <title>Upload and Display Video</title>
+    <style>
+        /* Spinner Styles */
+        #progress {
+            display: none; /* Initially hidden */
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3; /* Light grey */
+            border-top: 4px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <h1>Take a Picture and Upload</h1>
-    <video id="video" autoplay></video>
-    <button id="capture">Capture</button>
-    <canvas id="canvas" style="display:none;"></canvas>
+    <h1>Upload and Display Video</h1>
     <form id="upload-form">
-        <input type="file" id="file-input" accept="image/*" capture="camera" />
-        <button type="submit">Upload</button>
+        <input type="file" id="video-input" accept="video/*" />
+        <button type="submit">Upload Video</button>
     </form>
+
+    <!-- Progress Indicator -->
+    <div id="progress">
+        <div class="spinner"></div>
+        <p>Processing video, please wait...</p>
+    </div>
+
+    <video id="uploaded-video" controls style="width: 100%; margin-top: 20px;"></video>
 
     <script src="/static/main.js"></script>
 </body>
